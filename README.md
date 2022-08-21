@@ -2,7 +2,7 @@
 
 Nuestro equipo está conformado por:
 
-Nicolle Alexandra Palacios - Scrum Master
-Helbert Alejandro Garcia Melo - Desarrollador
-Yaquelin Cruz Moreno - Analista
-Daniel Becerra - Administrador de Bases de Datos
+- Nicolle Alexandra Palacios - Scrum Master
+- Helbert Alejandro Garcia Melo - Desarrollador
+- Yaquelin Cruz Moreno - Analista
+- Daniel Becerra - Administrador de Bases de Datos
