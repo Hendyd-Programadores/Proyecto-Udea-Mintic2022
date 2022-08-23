@@ -5,46 +5,46 @@ public class main {
     //se crea método
     public static void main(String[] args) {
         //Se crea objeto persona
-        Persona Estudiante = new Persona();
+        Persona Empleado = new Persona();
         //Se crea objeto scanner
         Scanner Esc = new Scanner(System.in);
-        String Nombres, Apellidos, Id, correoElectronico, pais;
+        String Nombres, Apellidos, Id, correoElectronico, cargo;
         int Edad;
         //Se ordena imprimir indicaciones
         System.out.println("Ingrese su nombre: ");
         Nombres = Esc.next();
-        Estudiante.setNombres(Nombres);
+        Empleado.setNombres(Nombres);
         System.out.println("Ingrese sus apellidos: ");
         Apellidos = Esc.next();
-        Estudiante.setApellidos(Apellidos);
+        Empleado.setApellidos(Apellidos);
         System.out.println("Ingrese su Id (identificacion): ");
         Id = Esc.next();
-        Estudiante.setId(Id);
+        Empleado.setId(Id);
         System.out.println("Ingrese su correo electronico: ");
         correoElectronico = Esc.next();
-        Estudiante.setCorreoElectronico(correoElectronico);
-        System.out.println("Ingrese su pais de residencia: ");
+        Empleado.setCorreoElectronico(correoElectronico);
+        System.out.println("Ingrese su cargo: ");
         pais = Esc.next();
-        Estudiante.setPais(pais);
+        Empleado.setCargo(Cargo);
         System.out.println("ingrese su edad (#): ");
         Edad = Esc.nextInt();
-        Estudiante.setEdad(Edad);
+        Empleado.setEdad(Edad);
         System.out.println("\n-------DATOS DEL ESTUDIANTE----------" +
-                "\n Nombres: " + Estudiante.getNombres()
-                + "\n Apellidos:" + Estudiante.getApellidos()
-                + "\n Id: " + Estudiante.getId()
-                + "\n correo electronico: " + Estudiante.getCorreoElectronico()
-                + "\n Pais: " + Estudiante.getPais()
-                + "\n Edad: " + Estudiante.getEdad());
+                "\n Nombres: " + Empleado.getNombres()
+                + "\n Apellidos:" + Empeado.getApellidos()
+                + "\n Id: " + Empleado.getId()
+                + "\n correo electronico: " + Empleado.getCorreoElectronico()
+                + "\n Cargo: " + Empleado.getCargo()
+                + "\n Edad: " + Empleado.getEdad());
         //Se crea objeto estudiante
-        Persona Estu = new Persona("Pedro Pablo", "Alfaro", "7925456656", "palfaro@hotmail.com", "costa Rica", 23);
+        Persona Emplea= new Persona("Pedro Pablo", "Alfaro", "7925456656", "palfaro@hotmail.com", "costa Rica", 23);
         //se pide ingresar datos
         System.out.println("\n-------DATOS DEL ESTUDIANTE----------" +
-                "\n Nombres: " + Estu.getNombres()
-                + "\n Apellidos: " + Estu.getApellidos()
-                + "\n Id: " + Estu.getId()
-                + "\n correo electronico: " + Estu.getCorreoElectronico()
-                + "\n Pais: " + Estu.getPais()
-                + "\n Edad: " + Estudiante.getEdad());
+                "\n Nombres: " + Emplea.getNombres()
+                + "\n Apellidos: " + Emplea.getApellidos()
+                + "\n Id: " + Emplea.getId()
+                + "\n correo electronico: " + Emplea.getCorreoElectronico()
+                + "\n Cargo: " + Emplea.getCargo()
+                + "\n Edad: " + Emplea.getEdad());
     }
 }
