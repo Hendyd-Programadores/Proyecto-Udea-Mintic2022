@@ -7,3 +7,4 @@ y está conformado por:
 - Helbert Alejandro Garcia Melo - Desarrollador
 - Yaquelin Cruz Moreno - Analista
 - Daniel Becerra - Administrador de Bases de Datos
+- Jhonatan -
