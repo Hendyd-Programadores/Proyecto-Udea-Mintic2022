@@ -1,12 +1,12 @@
 public class Persona {
-    String Id, Nombres, Apellidos, CorreoElectronico, Pais;
+    String Id, Nombres, Apellidos, CorreoElectronico, Cargo;
     int Edad;
     //Se crea método constructor
     public Persona(){
 
     }
     //Se crea método constructor para todps los elementos
-    public Persona(String id, String nombres, String apellidos, String correoElectronico, String pais, int edad) {
+    public Persona(String id, String nombres, String apellidos, String correoElectronico, String cargo, int edad) {
         Id = id;
         Nombres = nombres;
         Apellidos = apellidos;
@@ -48,12 +48,12 @@ public class Persona {
         CorreoElectronico = correoElectronico;
     }
 
-    public String getPais() {
-        return Pais;
+    public String getCargo() {
+        return Cargo;
     }
 
-    public void setPais(String pais) {
-        Pais = pais;
+    public void setCargo(String Cargo) {
+        Cargo = cargo;
     }
 
     public int getEdad() {
