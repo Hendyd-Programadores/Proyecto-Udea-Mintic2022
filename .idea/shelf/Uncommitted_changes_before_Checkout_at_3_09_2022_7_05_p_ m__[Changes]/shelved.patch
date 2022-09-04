@@ -1,0 +1,199 @@
+Index: out/production/Proyecto-Udea-Mintic2022/.idea/modules.xml
+===================================================================
+diff --git a/out/production/Proyecto-Udea-Mintic2022/.idea/modules.xml b/out/production/Proyecto-Udea-Mintic2022/.idea/modules.xml
+deleted file mode 100644
+--- a/out/production/Proyecto-Udea-Mintic2022/.idea/modules.xml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Proyecto-Udea-Mintic2022.iml" filepath="$PROJECT_DIR$/.idea/Proyecto-Udea-Mintic2022.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: out/production/Proyecto-Udea-Mintic2022/.idea/Proyecto-Udea-Mintic2022.iml
+===================================================================
+diff --git a/out/production/Proyecto-Udea-Mintic2022/.idea/Proyecto-Udea-Mintic2022.iml b/out/production/Proyecto-Udea-Mintic2022/.idea/Proyecto-Udea-Mintic2022.iml
+deleted file mode 100644
+--- a/out/production/Proyecto-Udea-Mintic2022/.idea/Proyecto-Udea-Mintic2022.iml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Main.java b/Main.java
+deleted file mode 100644
+--- a/Main.java	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,5 +0,0 @@
+-public class Main {
+-    public static void main(String[] args){
+-        System.out.println("Esto Es una Prueba... \nVersion Java: "+ Runtime.version().toString());
+-    }
+-}
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Proyecto-Udea-Mintic2022.iml" filepath="$PROJECT_DIR$/.idea/Proyecto-Udea-Mintic2022.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: out/production/Proyecto-Udea-Mintic2022/.idea/misc.xml
+===================================================================
+diff --git a/out/production/Proyecto-Udea-Mintic2022/.idea/misc.xml b/out/production/Proyecto-Udea-Mintic2022/.idea/misc.xml
+deleted file mode 100644
+--- a/out/production/Proyecto-Udea-Mintic2022/.idea/misc.xml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/Proyecto-Udea-Mintic2022.iml
+===================================================================
+diff --git a/.idea/Proyecto-Udea-Mintic2022.iml b/.idea/Proyecto-Udea-Mintic2022.iml
+deleted file mode 100644
+--- a/.idea/Proyecto-Udea-Mintic2022.iml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: out/production/Proyecto-Udea-Mintic2022/README.md
+===================================================================
+diff --git a/out/production/Proyecto-Udea-Mintic2022/README.md b/out/production/Proyecto-Udea-Mintic2022/README.md
+deleted file mode 100644
+--- a/out/production/Proyecto-Udea-Mintic2022/README.md	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,12 +0,0 @@
+-# Proyecto-Udea-Mintic2022
+-
+-## Rama development
+-
+-Nuestro equipo se llama  "HENDYD PROGRAMADORES" 
+-y está conformado por:
+-
+-- Nicolle Alexandra Palacios - Scrum Master
+-- Helbert Alejandro Garcia Melo - Desarrollador
+-- Yaquelin Cruz Moreno - Analista
+-- Daniel Becerra - Administrador de Bases de Datos
+-- Jhonatan Diaz - Product Owner
+\ No newline at end of file
+Index: out/production/Proyecto-Udea-Mintic2022/.idea/vcs.xml
+===================================================================
+diff --git a/out/production/Proyecto-Udea-Mintic2022/.idea/vcs.xml b/out/production/Proyecto-Udea-Mintic2022/.idea/vcs.xml
+deleted file mode 100644
+--- a/out/production/Proyecto-Udea-Mintic2022/.idea/vcs.xml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: out/production/Proyecto-Udea-Mintic2022/.idea/.gitignore
+===================================================================
+diff --git a/out/production/Proyecto-Udea-Mintic2022/.idea/.gitignore b/out/production/Proyecto-Udea-Mintic2022/.idea/.gitignore
+deleted file mode 100644
+--- a/out/production/Proyecto-Udea-Mintic2022/.idea/.gitignore	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/misc.xml
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
++++ /dev/null	(revision 9bd8a90960e3569dc14ef4df73dc73243591cbb8)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.java b/main.java
+new file mode 100644
+--- /dev/null	(date 1662249918557)
++++ b/main.java	(date 1662249918557)
+@@ -0,0 +1,7 @@
++public class main {
++    //se crea método
++    public static void main(String[] args) {
++        System.out.println("Hola :D");
++    }
++
++}
+\ No newline at end of file
