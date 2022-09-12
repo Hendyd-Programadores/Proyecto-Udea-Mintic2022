@@ -12,22 +12,32 @@ public class Empleado extends Empresa{
     private String nombreEmpleado;
     private String correoEmpleado;
     private Roles rolEmpleado;
+    private Profile perfil;
+    private Empresa empresa;
+    private MovimientoDinero transacciones;
+    private Date createdAt;
+    private Date updateAt;
 
     private Empresa empresa;
 
     //Constructor
     public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
         this.idEmpleado = idEmpleado;
-        this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
+        this.perfil = perfil;
+        this.empresa = empresa;
+        this.transacciones = transacciones1;
+        this.createdAt = createdAt1;
+        this.updateAt = updateAt1;
     }
 
     public Empleado() {
     }
 
     //Getters and Setters
+
     public long getIdEmpleado() {
         return idEmpleado;
     }
@@ -58,6 +68,52 @@ public class Empleado extends Empresa{
 
     public void setRolEmpleado(Roles rolEmpleado) {
         this.rolEmpleado = rolEmpleado;
+    }
+
+    public Profile getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Profile perfil) {
+        this.perfil = perfil;
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    @Override
+    public MovimientoDinero getTransacciones() {
+        return transacciones;
+    }
+
+    @Override
+    public void setTransacciones(MovimientoDinero transacciones) {
+        this.transacciones = transacciones;
+    }
+
+    @Override
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    @Override
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public Date getUpdateAt() {
+        return updateAt;
+    }
+
+    @Override
+    public void setUpdateAt(Date updateAt) {
+        this.updateAt = updateAt;
     }
 
     @Override

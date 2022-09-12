@@ -14,9 +14,10 @@ public class Empresa {
     private String direccion;
     private int telefono;
     private long nit;
-    private Empleado empleado;
-
-    private MovimientoDinero transacción;
+    private Empleado usuarios;
+    private MovimientoDinero transacciones;
+    private Date createdAt;
+    private Date updateAt;
 
     //Constructor
     public Empresa(double idEmpresa, String nombre, String direccion, int telefono, long nit) {
@@ -25,12 +26,17 @@ public class Empresa {
         this.direccion = direccion;
         this.telefono = telefono;
         this.nit = nit;
+        this.usuarios = usuarios;
+        this.transacciones = transacciones;
+        this.createdAt = createdAt;
+        this.updateAt = updateAt;
     }
 
     public Empresa() {
     }
 
     //Getters and Setters
+
     public String getNombre() {
         return nombre;
     }
@@ -61,6 +67,38 @@ public class Empresa {
 
     public void setNit(long nit) {
         this.nit = nit;
+    }
+
+    public Empleado getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Empleado usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public MovimientoDinero getTransacciones() {
+        return transacciones;
+    }
+
+    public void setTransacciones(MovimientoDinero transacciones) {
+        this.transacciones = transacciones;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdateAt() {
+        return updateAt;
+    }
+
+    public void setUpdateAt(Date updateAt) {
+        this.updateAt = updateAt;
     }
 
     @Override
