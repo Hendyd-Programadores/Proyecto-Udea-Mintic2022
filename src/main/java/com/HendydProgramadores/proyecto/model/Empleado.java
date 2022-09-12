@@ -1,27 +1,38 @@
 package com.HendydProgramadores.proyecto.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
-public class Empleado extends Empresa {
-
+@Entity
+@Table(name = "empleados")
+public class Empleado extends Empresa{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     private long idEmpleado;
+    @ManyToOne
+    @JoinColumn(name = "empresa_id")
+    private Empresa empresa;
     private String nombreEmpleado;
     private String correoEmpleado;
     private Roles rolEmpleado;
     private Profile perfil;
-    private Empresa empresa;
     private MovimientoDinero transacciones;
     private Date createdAt;
     private Date updateAt;
 
-    //Constructor
 
-    public Empleado(String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, Empresa empresa) {
+    //Constructor
+    public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado,Profile perfil,MovimientoDinero transacciones,Date createdAt,Date updateAt) {
+        this.idEmpleado = idEmpleado;
+        this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
-        this.empresa = empresa;
+        this.perfil = perfil;
+        this.transacciones = transacciones;
+        this.createdAt = createdAt;
+        this.updateAt = updateAt;
     }
 
     public Empleado() {
@@ -61,6 +72,14 @@ public class Empleado extends Empresa {
         this.rolEmpleado = rolEmpleado;
     }
 
+    public Profile getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Profile perfil) {
+        this.perfil = perfil;
+    }
+
     public Empresa getEmpresa() {
         return empresa;
     }
@@ -70,9 +89,40 @@ public class Empleado extends Empresa {
     }
 
     @Override
+    public MovimientoDinero getTransacciones() {
+        return transacciones;
+    }
+
+    @Override
+    public void setTransacciones(MovimientoDinero transacciones) {
+        this.transacciones = transacciones;
+    }
+
+    @Override
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    @Override
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public Date getUpdateAt() {
+        return updateAt;
+    }
+
+    @Override
+    public void setUpdateAt(Date updateAt) {
+        this.updateAt = updateAt;
+    }
+
+    @Override
     public String toString() {
         return "Empleado{" +
                 "idEmpleado=" + idEmpleado +
+                ", empresa='" + empresa.getNombre() + '\'' +
                 ", nombreDeEmpleado='" + nombreEmpleado + '\'' +
                 ", correoEmpleado='" + correoEmpleado + '\'' +
                 ", rolEmpleado=" + rolEmpleado +
