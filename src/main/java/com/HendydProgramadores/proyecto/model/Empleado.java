@@ -10,6 +10,8 @@ public class Empleado extends Empresa{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     private long idEmpleado;
+    @ManyToOne
+    @JoinColumn(name = "empresa_id")
     private Empresa empresa;
     private String nombreEmpleado;
     private String correoEmpleado;

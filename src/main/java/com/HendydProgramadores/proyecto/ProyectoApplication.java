@@ -4,6 +4,7 @@ import com.HendydProgramadores.proyecto.model.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.converter.json.GsonBuilderUtils;
+import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class ProyectoApplication {

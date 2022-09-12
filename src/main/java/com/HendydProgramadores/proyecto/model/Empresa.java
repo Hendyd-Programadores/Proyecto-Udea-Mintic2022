@@ -15,6 +15,8 @@ public class Empresa {
     private String direccion;
     private int telefono;
     private long nit;
+    @ManyToOne
+    @JoinColumn(name = "usuarios_id_empleado")
     private Empleado usuarios;
     private MovimientoDinero transacciones;
     private Date createdAt;

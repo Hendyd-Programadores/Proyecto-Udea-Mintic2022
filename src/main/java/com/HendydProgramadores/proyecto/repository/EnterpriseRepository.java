@@ -8,3 +8,4 @@ import javax.persistence.Id;
 public interface EnterpriseRepository<T> extends JpaRepository<Empresa, Integer> {
 
 }
+
