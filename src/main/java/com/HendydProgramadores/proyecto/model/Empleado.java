@@ -1,6 +1,7 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "empleados")
@@ -9,28 +10,27 @@ public class Empleado extends Empresa{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     private long idEmpleado;
+    private Empresa empresa;
     private String nombreEmpleado;
     private String correoEmpleado;
     private Roles rolEmpleado;
     private Profile perfil;
-    private Empresa empresa;
     private MovimientoDinero transacciones;
     private Date createdAt;
     private Date updateAt;
 
-    private Empresa empresa;
 
     //Constructor
-    public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
+    public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado,Profile perfil,MovimientoDinero transacciones,Date createdAt,Date updateAt) {
         this.idEmpleado = idEmpleado;
+        this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
         this.perfil = perfil;
-        this.empresa = empresa;
-        this.transacciones = transacciones1;
-        this.createdAt = createdAt1;
-        this.updateAt = updateAt1;
+        this.transacciones = transacciones;
+        this.createdAt = createdAt;
+        this.updateAt = updateAt;
     }
 
     public Empleado() {

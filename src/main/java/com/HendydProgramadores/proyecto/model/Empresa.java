@@ -1,6 +1,7 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="empresas")
