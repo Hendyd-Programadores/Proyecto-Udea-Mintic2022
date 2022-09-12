@@ -5,26 +5,24 @@ import java.util.Date;
 public class Empresa {
 
     //Atributos
-    private String nombre;
-    private String direccion;
-    private int telefono;
-    private long nit;
+    String nombre;
+    String direccion;
+    int telefono;
+    long nit;
     private Empleado usuarios;
     private MovimientoDinero transacciones;
     private Date createdAt;
     private Date updateAt;
 
     //Constructor
-    public Empresa(String nombre, String direccion, int telefono, long nit, Empleado usuarios, MovimientoDinero transacciones, Date createdAt, Date updateAt) {
+
+    public Empresa(String nombre, String direccion, int telefono, long nit) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.nit = nit;
-        this.usuarios = usuarios;
-        this.transacciones = transacciones;
-        this.createdAt = createdAt;
-        this.updateAt = updateAt;
     }
+
     public Empresa() {
     }
 
@@ -60,38 +58,6 @@ public class Empresa {
 
     public void setNit(long nit) {
         this.nit = nit;
-    }
-
-    public Empleado getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(Empleado usuarios) {
-        this.usuarios = usuarios;
-    }
-
-    public MovimientoDinero getTransacciones() {
-        return transacciones;
-    }
-
-    public void setTransacciones(MovimientoDinero transacciones) {
-        this.transacciones = transacciones;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdateAt() {
-        return updateAt;
-    }
-
-    public void setUpdateAt(Date updateAt) {
-        this.updateAt = updateAt;
     }
 
     @Override

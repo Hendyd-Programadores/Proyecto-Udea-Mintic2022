@@ -2,7 +2,7 @@ package com.HendydProgramadores.proyecto.model;
 
 import java.util.Date;
 
-public class Empleado extends Empresa{
+public class Empleado extends Empresa {
 
     //Atributos
     private long idEmpleado;
@@ -16,17 +16,12 @@ public class Empleado extends Empresa{
     private Date updateAt;
 
     //Constructor
-    public Empleado(String nombre, String direccion, int telefono, long nit, Empleado usuarios, MovimientoDinero transacciones, Date createdAt, Date updateAt, long idEmpleado, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, Profile perfil, Empresa empresa, MovimientoDinero transacciones1, Date createdAt1, Date updateAt1) {
-        super(nombre, direccion, telefono, nit, usuarios, transacciones, createdAt, updateAt);
-        this.idEmpleado = idEmpleado;
+
+    public Empleado(String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, Empresa empresa) {
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
-        this.perfil = perfil;
         this.empresa = empresa;
-        this.transacciones = transacciones1;
-        this.createdAt = createdAt1;
-        this.updateAt = updateAt1;
     }
 
     public Empleado() {
@@ -66,50 +61,12 @@ public class Empleado extends Empresa{
         this.rolEmpleado = rolEmpleado;
     }
 
-    public Profile getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(Profile perfil) {
-        this.perfil = perfil;
-    }
-
     public Empresa getEmpresa() {
         return empresa;
     }
 
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
-    }
-
-    @Override
-    public MovimientoDinero getTransacciones() {
-        return transacciones;
-    }
-
-    @Override
-    public void setTransacciones(MovimientoDinero transacciones) {
-        this.transacciones = transacciones;
-    }
-
-    @Override
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    @Override
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    @Override
-    public Date getUpdateAt() {
-        return updateAt;
-    }
-
-    @Override
-    public void setUpdateAt(Date updateAt) {
-        this.updateAt = updateAt;
     }
 
     @Override

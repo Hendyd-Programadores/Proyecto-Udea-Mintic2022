@@ -15,14 +15,10 @@ public class MovimientoDinero {
 
     //Constructor
 
-    public MovimientoDinero(long id, String concepto, float monto, Empleado usuario, Empresa empresa, Date createdAt, Date updateAt) {
-        this.id = id;
+    public MovimientoDinero(String concepto, float monto, Empleado usuario) {
         this.concepto = concepto;
         this.monto = monto;
         this.usuario = usuario;
-        this.empresa = empresa;
-        this.createdAt = createdAt;
-        this.updateAt = updateAt;
     }
 
     public MovimientoDinero() {
