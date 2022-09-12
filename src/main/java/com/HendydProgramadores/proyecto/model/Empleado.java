@@ -1,17 +1,24 @@
 package com.HendydProgramadores.proyecto.model;
 
-public class Empleado extends Empresa{
+import javax.persistence.*;
 
+@Entity
+@Table(name = "empleados")
+public class Empleado extends Empresa{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     private long idEmpleado;
     private String nombreEmpleado;
     private String correoEmpleado;
     private Roles rolEmpleado;
 
+    private Empresa empresa;
+
     //Constructor
-    public Empleado(String nombre, String direccion, int telefono, long nit, long idEmpleado, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
-        super(nombre, direccion, telefono, nit);
+    public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
         this.idEmpleado = idEmpleado;
+        this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
@@ -57,6 +64,7 @@ public class Empleado extends Empresa{
     public String toString() {
         return "Empleado{" +
                 "idEmpleado=" + idEmpleado +
+                ", empresa='" + empresa.getNombre() + '\'' +
                 ", nombreDeEmpleado='" + nombreEmpleado + '\'' +
                 ", correoEmpleado='" + correoEmpleado + '\'' +
                 ", rolEmpleado=" + rolEmpleado +

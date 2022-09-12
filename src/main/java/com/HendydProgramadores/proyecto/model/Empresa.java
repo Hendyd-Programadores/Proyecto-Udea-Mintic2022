@@ -1,8 +1,15 @@
 package com.HendydProgramadores.proyecto.model;
 
-public class Empresa {
+import javax.persistence.*;
 
+@Entity
+@Table(name="empresas")
+public class Empresa {
+    @Id
+    @Column(name="id")
+    @GeneratedValue( strategy = GenerationType.IDENTITY)
     //Atributos
+    private double idEmpresa;
     private String nombre;
     private String direccion;
     private int telefono;
@@ -12,7 +19,8 @@ public class Empresa {
     private MovimientoDinero transacción;
 
     //Constructor
-    public Empresa(String nombre, String direccion, int telefono, long nit) {
+    public Empresa(double idEmpresa, String nombre, String direccion, int telefono, long nit) {
+        this.idEmpresa = idEmpresa;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
