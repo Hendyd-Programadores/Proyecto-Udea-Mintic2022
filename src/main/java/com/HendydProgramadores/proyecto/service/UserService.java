@@ -19,9 +19,7 @@ public class UserService {
         return usuarios;
     }
     public List<Empleado> verUsuarioById(Long id){
-        List<Empleado> usuario = new ArrayList<Empleado>();
-        usuario.addAll(employedRepository.findAllById(id).get(id));
-        return usuario;
+        return (List<Empleado>) employedRepository.findById(id).get();
     }
     public void crearUsuario(Empleado empleado){
         employedRepository.save(empleado);

@@ -14,6 +14,8 @@ public class Profile {
     private String id;
     private String imagen;
     private String telefono;
+    @OneToOne
+    @JoinColumn(name = "id_empleado")
     private Empleado usuario;
     private Date createAt;
     private Date updateAt;

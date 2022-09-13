@@ -12,7 +12,11 @@ public class MovimientoDinero {
     private Long id;
     private String concepto;
     private float monto;
+    @OneToOne
+    @JoinColumn(name = "id_empleado")
     private Empleado usuario;
+    @OneToOne
+    @JoinColumn(name = "id_empresa")
     private Empresa empresa;
     private Date createdAt;
     private Date updateAt;

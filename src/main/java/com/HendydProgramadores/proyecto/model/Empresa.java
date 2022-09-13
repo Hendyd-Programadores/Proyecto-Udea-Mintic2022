@@ -8,7 +8,7 @@ import java.util.Date;
 public class Empresa {
 
     @Id
-    @Column(name="id", nullable = false)
+    @Column(name="id_empresa", nullable = false)
     @GeneratedValue( strategy = GenerationType.AUTO)
     //Atributos
     private Double idEmpresa;
@@ -17,8 +17,10 @@ public class Empresa {
     private int telefono;
     private long nit;
     @ManyToOne
-    @JoinColumn(name = "usuarios_id_empleado")
-    private Empleado usuarios;
+    @JoinColumn(name = "id_empleado")
+    private Empleado usuario;
+    @ManyToOne
+    @JoinColumn(name = "id_transacciones")
     private MovimientoDinero transacciones;
     private Date createdAt;
     private Date updateAt;
@@ -68,12 +70,12 @@ public class Empresa {
         this.nit = nit;
     }
 
-    public Empleado getUsuarios() {
-        return usuarios;
+    public Empleado getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarios(Empleado usuarios) {
-        this.usuarios = usuarios;
+    public void setUsuario(Empleado usuarios) {
+        this.usuario = usuarios;
     }
 
     public MovimientoDinero getTransacciones() {

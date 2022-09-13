@@ -11,16 +11,19 @@ public class Empleado extends Empresa{
     //Atributos
     private Long idEmpleado;
     @ManyToOne
-    @JoinColumn(name = "empresa_id")
+    @JoinColumn(name = "id_empresa")
     private Empresa empresa;
     private String nombreEmpleado;
     private String correoEmpleado;
     private Roles rolEmpleado;
+    @OneToOne
+    @JoinColumn(name = "id_perfil")
     private Profile perfil;
+    @ManyToOne
+    @JoinColumn(name = "id_transacciones")
     private MovimientoDinero transacciones;
     private Date createdAt;
     private Date updateAt;
-
 
     //Constructor
     public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
