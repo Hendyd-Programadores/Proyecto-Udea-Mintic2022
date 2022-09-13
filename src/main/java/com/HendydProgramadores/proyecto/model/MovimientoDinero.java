@@ -1,11 +1,15 @@
 package com.HendydProgramadores.proyecto.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class MovimientoDinero {
-
+    @Id
+    @Column(name="id", nullable = false)
+    @GeneratedValue( strategy = GenerationType.AUTO)
     //Atributos
-    private long id;
+    private Long id;
     private String concepto;
     private float monto;
     private Empleado usuario;
@@ -22,6 +26,9 @@ public class MovimientoDinero {
     }
 
     public MovimientoDinero() {
+    }
+
+    public MovimientoDinero(String pago_de_servicios_publicos, int monto, String nombreEmpleado) {
     }
 
     //Getters and Setters

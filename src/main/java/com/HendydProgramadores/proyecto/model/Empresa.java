@@ -6,11 +6,12 @@ import java.util.Date;
 @Entity
 @Table(name="empresas")
 public class Empresa {
+
     @Id
-    @Column(name="id")
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @Column(name="id", nullable = false)
+    @GeneratedValue( strategy = GenerationType.AUTO)
     //Atributos
-    private double idEmpresa;
+    private Double idEmpresa;
     private String nombre;
     private String direccion;
     private int telefono;
@@ -23,16 +24,11 @@ public class Empresa {
     private Date updateAt;
 
     //Constructor
-    public Empresa(double idEmpresa, String nombre, String direccion, int telefono, long nit) {
-        this.idEmpresa = idEmpresa;
+    public Empresa(String nombre, String direccion, int telefono, long nit) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.nit = nit;
-        this.usuarios = usuarios;
-        this.transacciones = transacciones;
-        this.createdAt = createdAt;
-        this.updateAt = updateAt;
     }
 
     public Empresa() {

@@ -7,9 +7,9 @@ import java.util.Date;
 @Table(name = "empleados")
 public class Empleado extends Empresa{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     //Atributos
-    private long idEmpleado;
+    private Long idEmpleado;
     @ManyToOne
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
@@ -23,16 +23,12 @@ public class Empleado extends Empresa{
 
 
     //Constructor
-    public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado,Profile perfil,MovimientoDinero transacciones,Date createdAt,Date updateAt) {
+    public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
         this.idEmpleado = idEmpleado;
         this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
-        this.perfil = perfil;
-        this.transacciones = transacciones;
-        this.createdAt = createdAt;
-        this.updateAt = updateAt;
     }
 
     public Empleado() {

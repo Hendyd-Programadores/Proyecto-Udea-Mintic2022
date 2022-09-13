@@ -1,7 +1,14 @@
 package com.HendydProgramadores.proyecto.model;
 
+import javax.persistence.*;
 import java.util.Date;
+
+@Entity
 public class Profile {
+
+    @Id
+    @Column(name="id", nullable = false)
+    @GeneratedValue( strategy = GenerationType.AUTO)
 
     //Atributos
     private String id;
