@@ -3,9 +3,7 @@ package com.HendydProgramadores.proyecto.controller;
 import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,10 +11,31 @@ import java.util.List;
 public class EnterpriseController {
 
     @Autowired
-    private EnterpriseService service;
+    private EnterpriseService EnterpriseService;
 
     @GetMapping("/enterprises")
-    public List<Empresa> listEmpresa(){
-        return service.listEmpresas();
+    private List<Empresa> listEmpresas(){
+        return EnterpriseService.listEmpresas();
+    }
+
+    @PostMapping("/enterprises")
+    private void addEmpresa(@RequestBody Empresa empresa){
+        EnterpriseService.addEmpresa(empresa);
+    }
+
+    @GetMapping("/enterprises/[id]")
+    private void getEmpresaById(@PathVariable Long id){
+        Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
+        EnterpriseService.getEmpresaById(id);
+    }
+
+    @PatchMapping("/enterprises/[id]")
+    private void editEmpresa(@PathVariable Long id, @RequestBody Empresa empresa){
+        EnterpriseService.editEmpresa(id, empresa);
+    }
+
+    @DeleteMapping("/enterprises/[id]")
+    private void deleteEmpresa(@PathVariable("id") Long id){
+        EnterpriseService.deleteEmpresa(id);
     }
 }
