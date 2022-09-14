@@ -15,7 +15,7 @@ public class EnterpriseService {
     public List<Empresa> listEmpresas(){
         return respository.findAll();
     }
-    public Empresa getEmpresaById(int id){
+    public Empresa getEmpresaById(Long id){
         return (Empresa) respository.findById(id).get();
     }
 
@@ -25,7 +25,7 @@ public class EnterpriseService {
     }
 
     //PATCH
-    public void editEmpresa(Double id, Empresa empresa){
+    public void editEmpresa(Long id, Empresa empresa){
         Empresa empresaAuxiliar = new Empresa();
         empresaAuxiliar.setNombre(empresaAuxiliar.getNombre());
         empresaAuxiliar.setNit(empresaAuxiliar.getNit());
@@ -35,7 +35,7 @@ public class EnterpriseService {
     }
 
     //DELETE
-    public boolean deleteEmpresa(int id){
+    public boolean deleteEmpresa(Long id){
         respository.deleteById(id);
         return true;
     }
