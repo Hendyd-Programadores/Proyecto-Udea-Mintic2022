@@ -1,29 +1,33 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
-@Table(name = "empleados")
+@Table(name = "Empleado")
 public class Empleado extends Empresa{
     @Id
+    @Column(name="id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     //Atributos
     private Long idEmpleado;
     @ManyToOne
-    @JoinColumn(name = "id_empresa")
+    @JoinColumn(name = "Empresa_id")
     private Empresa empresa;
     private String nombreEmpleado;
     private String correoEmpleado;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Rol")
     private Roles rolEmpleado;
-    @OneToOne
-    @JoinColumn(name = "id_perfil")
-    private Profile perfil;
-    @ManyToOne
-    @JoinColumn(name = "id_transacciones")
-    private MovimientoDinero transacciones;
     private Date createdAt;
     private Date updateAt;
+    @OneToOne
+    @JoinColumn(name = "Profile_id")
+    private Profile perfil;
+    @OneToMany
+    @JoinColumn()
+    private ArrayList<MovimientoDinero> transacciones;
 
     //Constructor
     public Empleado(long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado) {
@@ -39,12 +43,20 @@ public class Empleado extends Empresa{
 
     //Getters and Setters
 
-    public long getIdEmpleado() {
+    public Long getIdEmpleado() {
         return idEmpleado;
     }
 
-    public void setIdEmpleado(long idEmpleado) {
+    public void setIdEmpleado(Long idEmpleado) {
         this.idEmpleado = idEmpleado;
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
 
     public String getNombreEmpleado() {
@@ -71,32 +83,6 @@ public class Empleado extends Empresa{
         this.rolEmpleado = rolEmpleado;
     }
 
-    public Profile getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(Profile perfil) {
-        this.perfil = perfil;
-    }
-
-    public Empresa getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
-    }
-
-    @Override
-    public MovimientoDinero getTransacciones() {
-        return transacciones;
-    }
-
-    @Override
-    public void setTransacciones(MovimientoDinero transacciones) {
-        this.transacciones = transacciones;
-    }
-
     @Override
     public Date getCreatedAt() {
         return createdAt;
@@ -115,6 +101,23 @@ public class Empleado extends Empresa{
     @Override
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public Profile getPerfil() {
+        return perfil;
+    }
+
+    public void setPerfil(Profile perfil) {
+        this.perfil = perfil;
+    }
+
+    @Override
+    public ArrayList<MovimientoDinero> getTransacciones() {
+        return transacciones;
+    }
+
+    public void setTransacciones(ArrayList<MovimientoDinero> transacciones) {
+        this.transacciones = transacciones;
     }
 
     @Override

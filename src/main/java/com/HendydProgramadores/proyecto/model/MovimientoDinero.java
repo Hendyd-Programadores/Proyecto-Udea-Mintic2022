@@ -1,10 +1,12 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
-public class MovimientoDinero {
+@Table(name ="MovimientoDinero")
+public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     @Id
     @Column(name="id", nullable = false)
     @GeneratedValue( strategy = GenerationType.AUTO)
@@ -12,14 +14,15 @@ public class MovimientoDinero {
     private Long id;
     private String concepto;
     private float monto;
-    @OneToOne
-    @JoinColumn(name = "id_empleado")
-    private Empleado usuario;
-    @OneToOne
-    @JoinColumn(name = "id_empresa")
-    private Empresa empresa;
     private Date createdAt;
     private Date updateAt;
+    @OneToMany
+    @JoinColumn(name = "Empleado_Id")
+    private Empleado usuario;
+    @ManyToOne
+    @JoinColumn(name = "Empresa_Id")
+    private Empresa empresa;
+
 
     //Constructor
 

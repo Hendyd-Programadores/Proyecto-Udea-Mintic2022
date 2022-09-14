@@ -1,11 +1,15 @@
 package com.HendydProgramadores.proyecto.controller;
 
+import com.HendydProgramadores.proyecto.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+public class UserController {
 
-class UserController {
+    @Autowired
+    private UserService service;
 
     @GetMapping("/users")
     public String User(){
