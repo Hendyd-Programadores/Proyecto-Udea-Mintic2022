@@ -16,7 +16,7 @@ public class EnterpriseController {
     private EnterpriseService service;
 
     @GetMapping("/enterprises")
-    private void addEmpresa (@RequestBody Empresa empresa){
-
+    public List<Empresa> listEmpresa(){
+        return service.listEmpresas();
     }
 }

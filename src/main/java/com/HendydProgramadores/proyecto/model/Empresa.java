@@ -1,27 +1,30 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
-@Table(name="empresas")
+@Table(name="Empresa")
 public class Empresa {
-
     @Id
     @Column(name="id", nullable = false)
     @GeneratedValue( strategy = GenerationType.AUTO)
     //Atributos
     private Double idEmpresa;
     private String nombre;
-    private String direccion;
-    private int telefono;
     private long nit;
-    @ManyToOne
-    @JoinColumn(name = "usuarios_id_empleado")
-    private Empleado usuarios;
-    private MovimientoDinero transacciones;
+    private int telefono;
+    private String direccion;
     private Date createdAt;
     private Date updateAt;
+    @OneToMany
+    @JoinColumn(name = "Empleados_id")
+    private ArrayList<Empleado> usuarios;
+    @OneToMany
+    @JoinColumn(name = "Transacciones_id")
+    private MovimientoDinero transacciones;
+
 
     //Constructor
     public Empresa(String nombre, String direccion, int telefono, long nit) {
@@ -36,28 +39,20 @@ public class Empresa {
 
     //Getters and Setters
 
+    public Double getIdEmpresa() {
+        return idEmpresa;
+    }
+
+    public void setIdEmpresa(Double idEmpresa) {
+        this.idEmpresa = idEmpresa;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
     }
 
     public long getNit() {
@@ -68,20 +63,20 @@ public class Empresa {
         this.nit = nit;
     }
 
-    public Empleado getUsuarios() {
-        return usuarios;
+    public int getTelefono() {
+        return telefono;
     }
 
-    public void setUsuarios(Empleado usuarios) {
-        this.usuarios = usuarios;
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
-    public MovimientoDinero getTransacciones() {
-        return transacciones;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setTransacciones(MovimientoDinero transacciones) {
-        this.transacciones = transacciones;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public Date getCreatedAt() {
@@ -98,6 +93,22 @@ public class Empresa {
 
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public ArrayList<Empleado> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(ArrayList<Empleado> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public ArrayList<MovimientoDinero> getTransacciones() {
+        return transacciones;
+    }
+
+    public void setTransacciones(MovimientoDinero transacciones) {
+        this.transacciones = transacciones;
     }
 
     @Override

@@ -6,14 +6,15 @@ import java.util.Date;
 @Entity
 public class Profile {
 
-    @Id
-    @Column(name="id", nullable = false)
-    @GeneratedValue( strategy = GenerationType.AUTO)
-
     //Atributos
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private String imagen;
     private String telefono;
+    @OneToOne
+    @JoinColumn(name = "Empleado_Id")
     private Empleado usuario;
     private Date createAt;
     private Date updateAt;
@@ -27,7 +28,6 @@ public class Profile {
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
-
     public Profile() {
     }
 
