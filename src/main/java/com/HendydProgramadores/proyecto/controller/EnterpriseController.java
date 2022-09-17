@@ -23,18 +23,18 @@ public class EnterpriseController {
         EnterpriseService.addEmpresa(empresa);
     }
 
-    @GetMapping("/enterprises/[id]")
+    @GetMapping("/enterprises/{id}")
     private void getEmpresaById(@PathVariable Long id){
         Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
         EnterpriseService.getEmpresaById(id);
     }
 
-    @PatchMapping("/enterprises/[id]")
+    @PatchMapping("/enterprises/{id}")
     private void editEmpresa(@PathVariable Long id, @RequestBody Empresa empresa){
         EnterpriseService.editEmpresa(id, empresa);
     }
 
-    @DeleteMapping("/enterprises/[id]")
+    @DeleteMapping("/enterprises/{id}")
     private void deleteEmpresa(@PathVariable("id") Long id){
         EnterpriseService.deleteEmpresa(id);
     }

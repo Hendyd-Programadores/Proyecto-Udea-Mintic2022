@@ -15,8 +15,4 @@ public class ProyectoApplication {
 		SpringApplication.run(ProyectoApplication.class, args);
 	}
 
-	Empresa empresa = new Empresa("Hendyd Programadores", "Calle 10 #10 - 10", 4858585, 800123456 );
-	Empleado usuario = new Empleado(1190123456, empresa, "Pepita Perez", "pepita.perez@hendyd.com", Roles.Operario);
-	MovimientoDinero transaccion = new MovimientoDinero("Pago de servicios publicos", 3450800, usuario.getNombreEmpleado());
-
 }

@@ -4,23 +4,32 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 
-@Entity
-@Table(name ="MovimientoDinero")
+//@Entity
+//@Table(name ="MovimientoDinero")
 public class MovimientoDinero extends ArrayList<MovimientoDinero> {
+    /*
     @Id
     @Column(name="id", nullable = false)
     @GeneratedValue( strategy = GenerationType.AUTO)
+
+     */
     //Atributos
     private Long id;
     private String concepto;
     private float monto;
     private Date createdAt;
     private Date updateAt;
+    /*
     @OneToMany
     @JoinColumn(name = "Empleado_Id")
+
+     */
     private Empleado usuario;
+    /*
     @ManyToOne
     @JoinColumn(name = "Empresa_Id")
+
+     */
     private Empresa empresa;
 
 

@@ -27,7 +27,7 @@ public class EnterpriseService {
     //PATCH
     public void editEmpresa(Long id, Empresa empresa){
         Empresa empresaAuxiliar = new Empresa();
-        empresaAuxiliar.setNombre(empresaAuxiliar.getNombre());
+        empresaAuxiliar.setNombre(empresa.getNombre());
         empresaAuxiliar.setNit(empresaAuxiliar.getNit());
         empresaAuxiliar.setTelefono(empresaAuxiliar.getTelefono());
         empresaAuxiliar.setDireccion(empresaAuxiliar.getDireccion());

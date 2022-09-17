@@ -4,29 +4,43 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 
-@Entity
-@Table(name = "Empleado")
+//@Entity
+//@Table(name = "Empleado")
 public class Empleado extends Empresa{
+    /*
     @Id
     @Column(name="id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
+
+     */
     //Atributos
     private Long idEmpleado;
+    /*
     @ManyToOne
     @JoinColumn(name = "Empresa_id")
+
+     */
     private Empresa empresa;
     private String nombreEmpleado;
     private String correoEmpleado;
+    /*
     @Enumerated(EnumType.STRING)
-    @Column(name = "Rol")
+    @Column(name = "rol")
+    */
     private Roles rolEmpleado;
     private Date createdAt;
     private Date updateAt;
+    /*
     @OneToOne
-    @JoinColumn(name = "Profile_id")
+    @JoinColumn(name = "profile_id")
+
+     */
     private Profile perfil;
+    /*
     @OneToMany
     @JoinColumn()
+
+     */
     private ArrayList<MovimientoDinero> transacciones;
 
     //Constructor

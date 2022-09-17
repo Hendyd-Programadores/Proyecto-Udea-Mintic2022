@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public interface MovimientoDineroRepository<T> extends JpaRepository<MovimientoDinero, Long> {
-
+/*
     //GET
     @Query(value = "select * from Empresa", nativeQuery = true)
     public abstract List<MovimientoDinero> findAll();
@@ -29,4 +29,6 @@ public interface MovimientoDineroRepository<T> extends JpaRepository<MovimientoD
     //DELETE
     @Query(value = "delete from transacciones where id_empresa=?1",nativeQuery = true)
     public abstract boolean deleteByEnterprise(long id);
+
+ */
 }

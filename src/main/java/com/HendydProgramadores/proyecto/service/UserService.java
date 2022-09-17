@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Service
+//@Service
 public class UserService {
-
+/*
     @Autowired
     EmployedRepository employedRepository;
 
@@ -21,7 +21,7 @@ public class UserService {
         return employedRepository.findAll();
     }
     public Empleado verUsuarioById(Long id){
-        return (Empleado) employedRepository.findAllById(id);
+        return (Empleado) employedRepository.findById(id);
     }
     //POST
     public void crearUsuario(Empleado empleado){
@@ -42,4 +42,6 @@ public class UserService {
         employedRepository.deleteById(id);
         return true;
     }
+
+ */
 }

@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+//@RestController
 public class UserController {
-
+/*
     @Autowired
     private UserService UserService;
 
@@ -38,4 +38,6 @@ public class UserController {
     private void eliminarUsuario(@PathVariable("id") Long id){
         UserService.eliminarUsuario(id);
     }
+
+ */
 }

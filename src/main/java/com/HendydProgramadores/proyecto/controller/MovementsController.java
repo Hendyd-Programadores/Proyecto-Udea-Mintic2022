@@ -7,9 +7,9 @@ import com.HendydProgramadores.proyecto.service.EnterpriseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+//@RestController
 public class MovementsController {
-
+/*
     @Autowired
     private MovimientoDineroRepository repository;
 
@@ -30,4 +30,6 @@ public class MovementsController {
     private void deleteByEnterprise(@PathVariable("id") Long id){
         repository.deleteByEnterprise(id);
     }
+
+ */
 }

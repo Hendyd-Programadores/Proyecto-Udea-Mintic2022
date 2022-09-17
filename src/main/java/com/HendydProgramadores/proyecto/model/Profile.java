@@ -3,18 +3,24 @@ package com.HendydProgramadores.proyecto.model;
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity
+//@Entity
 public class Profile {
 
     //Atributos
+    /*
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
+
+     */
     private String id;
     private String imagen;
     private String telefono;
+    /*
     @OneToOne
     @JoinColumn(name = "Empleado_Id")
+
+     */
     private Empleado usuario;
     private Date createAt;
     private Date updateAt;

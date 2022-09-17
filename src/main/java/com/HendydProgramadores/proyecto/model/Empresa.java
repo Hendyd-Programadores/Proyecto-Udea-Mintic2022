@@ -19,10 +19,11 @@ public class Empresa {
     private Date createdAt;
     private Date updateAt;
     @OneToMany
-    @JoinColumn(name = "Empleados_id")
+    @JoinColumn(name = "id_empleados")
     private ArrayList<Empleado> usuarios;
-    @OneToMany
-    @JoinColumn(name = "Transacciones_id")
+
+    @ManyToOne
+    @JoinColumn(name = "transacciones_id")
     private MovimientoDinero transacciones;
 
 
