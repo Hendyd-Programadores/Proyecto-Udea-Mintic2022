@@ -24,9 +24,9 @@ public class EnterpriseController {
     }
 
     @GetMapping("/enterprises/{id}")
-    private void getEmpresaById(@PathVariable Long id){
-        Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
-        EnterpriseService.getEmpresaById(id);
+    private Empresa getEmpresaById(@PathVariable Long id){
+        //Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
+        return EnterpriseService.getEmpresaById(id);
     }
 /*
     @PatchMapping("/enterprises/{id}")
