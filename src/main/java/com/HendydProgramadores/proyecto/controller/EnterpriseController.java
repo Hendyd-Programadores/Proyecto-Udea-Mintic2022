@@ -11,7 +11,7 @@ import java.util.List;
 public class EnterpriseController {
 
     @Autowired
-    private EnterpriseService EnterpriseService;
+    EnterpriseService EnterpriseService;
 
     @GetMapping("/enterprises")
     private List<Empresa> listEmpresas(){
@@ -28,10 +28,16 @@ public class EnterpriseController {
         Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
         EnterpriseService.getEmpresaById(id);
     }
-
+/*
     @PatchMapping("/enterprises/{id}")
     private void editEmpresa(@PathVariable Long id, @RequestBody Empresa empresa){
         EnterpriseService.editEmpresa(id, empresa);
+    }
+
+ */
+    @PutMapping("/enterprise/{id}")
+    private void editEmpresa(@RequestBody Empresa empresa){
+        EnterpriseService.addEmpresa(empresa);
     }
 
     @DeleteMapping("/enterprises/{id}")

@@ -1,3 +1,4 @@
+/*
 package com.HendydProgramadores.proyecto.controller;
 
 import com.HendydProgramadores.proyecto.model.Empleado;
@@ -10,7 +11,7 @@ import java.util.List;
 
 //@RestController
 public class UserController {
-/*
+
     @Autowired
     private UserService UserService;
 
@@ -39,5 +40,6 @@ public class UserController {
         UserService.eliminarUsuario(id);
     }
 
- */
+
 }
+*/

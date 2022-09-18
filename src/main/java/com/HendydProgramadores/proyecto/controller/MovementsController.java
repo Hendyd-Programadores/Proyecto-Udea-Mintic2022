@@ -1,3 +1,4 @@
+/*
 package com.HendydProgramadores.proyecto.controller;
 
 import com.HendydProgramadores.proyecto.model.Empresa;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 //@RestController
 public class MovementsController {
-/*
+
     @Autowired
     private MovimientoDineroRepository repository;
 
@@ -31,5 +32,6 @@ public class MovementsController {
         repository.deleteByEnterprise(id);
     }
 
- */
+
 }
+*/

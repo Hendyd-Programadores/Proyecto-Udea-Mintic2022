@@ -4,26 +4,29 @@ import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class EnterpriseService {
     @Autowired
-    private EnterpriseRepository respository;
+    EnterpriseRepository enterpriseRespository;
 
     //GET
     public List<Empresa> listEmpresas(){
-        return respository.findAll();
+        //return enterpriseRespository.findAll();
+        return new ArrayList<Empresa>(enterpriseRespository.findAll());
     }
     public Empresa getEmpresaById(Long id){
-        return (Empresa) respository.findById(id).get();
+        return (Empresa) enterpriseRespository.findById(id).get();
     }
 
-    //POST
+    //POST y PUT
     public void addEmpresa(Empresa empresa){
-        respository.save(empresa);
+        enterpriseRespository.save(empresa);
     }
-
+/*
     //PATCH
     public void editEmpresa(Long id, Empresa empresa){
         Empresa empresaAuxiliar = new Empresa();
@@ -31,12 +34,14 @@ public class EnterpriseService {
         empresaAuxiliar.setNit(empresaAuxiliar.getNit());
         empresaAuxiliar.setTelefono(empresaAuxiliar.getTelefono());
         empresaAuxiliar.setDireccion(empresaAuxiliar.getDireccion());
-        respository.save(empresaAuxiliar);
+        enterpriseRespository.save(empresaAuxiliar);
     }
 
+ */
+
     //DELETE
-    public boolean deleteEmpresa(Long id){
-        respository.deleteById(id);
-        return true;
+    public void deleteEmpresa(Long id){
+        enterpriseRespository.deleteById(id);
+        //return true;
     }
 }

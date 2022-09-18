@@ -3,34 +3,31 @@ package com.HendydProgramadores.proyecto.model;
 import javax.persistence.*;
 import java.util.Date;
 
-//@Entity
+@Entity
 public class Profile {
 
     //Atributos
-    /*
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
-
-     */
-    private String id;
+    private Long id;
     private String imagen;
     private String telefono;
     /*
     @OneToOne
     @JoinColumn(name = "Empleado_Id")
-
-     */
     private Empleado usuario;
+    */
     private Date createAt;
     private Date updateAt;
 
     //Constructor
-    public Profile(String id, String imagen, String telefono, Empleado usuario, Date createAt, Date updateAt) {
+    public Profile(Long id, String imagen, String telefono, Date createAt, Date updateAt) {
+        //Empleado usuario
         this.id = id;
         this.imagen = imagen;
         this.telefono = telefono;
-        this.usuario = usuario;
+        //this.usuario = usuario;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
@@ -39,11 +36,11 @@ public class Profile {
 
     //Getter and Setter
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -62,7 +59,7 @@ public class Profile {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
+/*
     public Empleado getUsuario() {
         return usuario;
     }
@@ -70,6 +67,8 @@ public class Profile {
     public void setUsuario(Empleado usuario) {
         this.usuario = usuario;
     }
+
+ */
 
     public Date getCreateAt() {
         return createAt;

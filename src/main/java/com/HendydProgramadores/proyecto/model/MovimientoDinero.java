@@ -4,16 +4,13 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 
-//@Entity
-//@Table(name ="MovimientoDinero")
+@Entity
+@Table(name ="MovimientoDinero")
 public class MovimientoDinero extends ArrayList<MovimientoDinero> {
-    /*
+    //Atributos
     @Id
     @Column(name="id", nullable = false)
     @GeneratedValue( strategy = GenerationType.AUTO)
-
-     */
-    //Atributos
     private Long id;
     private String concepto;
     private float monto;
@@ -22,23 +19,20 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     /*
     @OneToMany
     @JoinColumn(name = "Empleado_Id")
-
-     */
     private Empleado usuario;
-    /*
+
     @ManyToOne
     @JoinColumn(name = "Empresa_Id")
-
-     */
     private Empresa empresa;
-
+*/
 
     //Constructor
 
-    public MovimientoDinero(String concepto, float monto, Empleado usuario) {
+    public MovimientoDinero(String concepto, float monto) {
+        //, Empleado usuario
         this.concepto = concepto;
         this.monto = monto;
-        this.usuario = usuario;
+        //this.usuario = usuario;
     }
 
     public MovimientoDinero() {
@@ -72,7 +66,7 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     public void setMonto(float monto) {
         this.monto = monto;
     }
-
+/*
     public Empleado getUsuario() {
         return usuario;
     }
@@ -88,6 +82,8 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
+
+ */
 
     public Date getCreatedAt() {
         return createdAt;
