@@ -1,7 +1,6 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Date;
 
 @Entity
@@ -11,7 +10,7 @@ public class Empresa {
     @Column(name="id", nullable = false)
     @GeneratedValue( strategy = GenerationType.AUTO)
     //Atributos
-    private Double idEmpresa;
+    private Long idEmpresa;
     @Column
     private String nombre;
     private long nit;
@@ -32,16 +31,16 @@ public class Empresa {
 
 
     //Constructor
-    public Empresa(Double idEmpresa, String nombre, long nit, int telefono, String direccion, Date createdAt, Date updateAt) {
+    public Empresa(Long idEmpresa, String nombre, long nit, int telefono, String direccion, Date createdAt, Date updateAt) {
         //, List<Empleado> usuarios, List<MovimientoDinero> transacciones
         this.idEmpresa = idEmpresa;
         this.nombre = nombre;
         this.nit = nit;
         this.telefono = telefono;
         this.direccion = direccion;
-        this.createdAt = createdAt;
+         this.createdAt = createdAt;
         this.updateAt = updateAt;
-        /*this.usuarios = usuarios;
+       /*this.usuarios = usuarios;
         this.transacciones = transacciones;
 
          */
@@ -52,11 +51,11 @@ public class Empresa {
 
     //Getters and Setters
 
-    public Double getIdEmpresa() {
+    public Long getIdEmpresa() {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(Double idEmpresa) {
+    public void setIdEmpresa(Long idEmpresa) {
         this.idEmpresa = idEmpresa;
     }
 
@@ -136,8 +135,8 @@ public class Empresa {
                 ", direccion='" + direccion + '\'' +
                 ", createdAt=" + createdAt +
                 ", updateAt=" + updateAt +
-                /*
-                ", usuarios=" + usuarios +
+
+                /*", usuarios=" + usuarios +
                 ", transacciones=" + transacciones +
 
                  */

@@ -26,6 +26,7 @@ public class EnterpriseService {
     public void addEmpresa(Empresa empresa){
         enterpriseRespository.save(empresa);
     }
+    public void editEmpresa(Empresa empresa){enterpriseRespository.save(empresa);}
 /*
     //PATCH
     public void editEmpresa(Long id, Empresa empresa){

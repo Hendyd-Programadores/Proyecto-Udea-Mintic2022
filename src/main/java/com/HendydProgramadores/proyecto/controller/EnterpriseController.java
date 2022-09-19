@@ -13,17 +13,17 @@ public class EnterpriseController {
     @Autowired
     EnterpriseService EnterpriseService;
 
-    @GetMapping("/enterprises")
+    @GetMapping("/enterprise")
     private List<Empresa> listEmpresas(){
         return EnterpriseService.listEmpresas();
     }
 
-    @PostMapping("/enterprises")
+    @PostMapping("/enterprise")
     private void addEmpresa(@RequestBody Empresa empresa){
         EnterpriseService.addEmpresa(empresa);
     }
 
-    @GetMapping("/enterprises/{id}")
+    @GetMapping("/enterprise/{id}")
     private Empresa getEmpresaById(@PathVariable Long id){
         //Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
         return EnterpriseService.getEmpresaById(id);
@@ -37,10 +37,10 @@ public class EnterpriseController {
  */
     @PutMapping("/enterprise/{id}")
     private void editEmpresa(@RequestBody Empresa empresa){
-        EnterpriseService.addEmpresa(empresa);
+        EnterpriseService.editEmpresa(empresa);
     }
 
-    @DeleteMapping("/enterprises/{id}")
+    @DeleteMapping("/enterprise/{id}")
     private void deleteEmpresa(@PathVariable("id") Long id){
         EnterpriseService.deleteEmpresa(id);
     }
