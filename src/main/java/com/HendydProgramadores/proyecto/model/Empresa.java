@@ -2,6 +2,7 @@ package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="empresa")
@@ -18,21 +19,16 @@ public class Empresa {
     private String direccion;
     private Date createdAt;
     private Date updateAt;
-    /*
-    @OneToMany
-    @JoinColumn(name = "empleados_id")
+
+    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Empleado> usuarios;
 
-    @OneToMany
-    @JoinColumn(name = "transacciones_id")
+    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<MovimientoDinero> transacciones;
-
-     */
 
 
     //Constructor
-    public Empresa(Long idEmpresa, String nombre, long nit, int telefono, String direccion, Date createdAt, Date updateAt) {
-        //, List<Empleado> usuarios, List<MovimientoDinero> transacciones
+    public Empresa(Long idEmpresa, String nombre, long nit, int telefono, String direccion, Date createdAt, Date updateAt, List<Empleado> usuarios, List<MovimientoDinero> transacciones) {
         this.idEmpresa = idEmpresa;
         this.nombre = nombre;
         this.nit = nit;
@@ -40,10 +36,8 @@ public class Empresa {
         this.direccion = direccion;
          this.createdAt = createdAt;
         this.updateAt = updateAt;
-       /*this.usuarios = usuarios;
-        this.transacciones = transacciones;
-
-         */
+       this.usuarios = usuarios;
+       this.transacciones = transacciones;
     }
 
     public Empresa() {
@@ -106,7 +100,7 @@ public class Empresa {
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
     }
-/*
+
     public List<Empleado> getUsuarios() {
         return usuarios;
     }
@@ -123,7 +117,6 @@ public class Empresa {
         this.transacciones = transacciones;
     }
 
- */
 
     @Override
     public String toString() {
@@ -135,11 +128,8 @@ public class Empresa {
                 ", direccion='" + direccion + '\'' +
                 ", createdAt=" + createdAt +
                 ", updateAt=" + updateAt +
-
-                /*", usuarios=" + usuarios +
+                ", usuarios=" + usuarios +
                 ", transacciones=" + transacciones +
-
-                 */
                 '}';
     }
 }

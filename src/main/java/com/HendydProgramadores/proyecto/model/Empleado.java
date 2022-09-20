@@ -1,16 +1,12 @@
-/*
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "empleado")
-public class Empleado extends Empresa{
+public class Empleado{
     //Atributos
-
     @Id
     @Column(name="id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,6 +17,7 @@ public class Empleado extends Empresa{
     private Empresa empresa;
 
 
+
     private String nombreEmpleado;
     private String correoEmpleado;
     @Enumerated(EnumType.STRING)
@@ -29,27 +26,23 @@ public class Empleado extends Empresa{
     private Date createdAt;
     private Date updateAt;
 
-    @OneToOne
-    @JoinColumn(name = "profile_id")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "perfil_id")
     private Profile perfil;
 
-
-
-
-
+    @OneToMany(mappedBy = "empleado",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<MovimientoDinero> transacciones;
 
     //Constructor
-    public Empleado(Long idEmpleado, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, Date createdAt, Date updateAt, List<MovimientoDinero> transacciones) {
-        //, Empresa empresa, Profile perfil
+    public Empleado(Long idEmpleado, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, Date createdAt, Date updateAt, Empresa empresa, List<MovimientoDinero> transacciones, Profile perfil) {
         this.idEmpleado = idEmpleado;
-        //this.empresa = empresa;
+        this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
         this.createdAt = createdAt;
         this.updateAt = updateAt;
-        //this.perfil = perfil;
+        this.perfil = perfil;
         this.transacciones = transacciones;
     }
 
@@ -99,22 +92,19 @@ public class Empleado extends Empresa{
         this.rolEmpleado = rolEmpleado;
     }
 
-    @Override
+
     public Date getCreatedAt() {
         return createdAt;
     }
 
-    @Override
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
-    @Override
     public Date getUpdateAt() {
         return updateAt;
     }
 
-    @Override
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
     }
@@ -127,8 +117,6 @@ public class Empleado extends Empresa{
         this.perfil = perfil;
     }
 
-
-    @Override
     public List<MovimientoDinero> getTransacciones() {
         return transacciones;
     }
@@ -141,10 +129,14 @@ public class Empleado extends Empresa{
     public String toString() {
         return "Empleado{" +
                 "idEmpleado=" + idEmpleado +
-                //", empresa='" + empresa.getNombre() + '\'' +
-                ", nombreDeEmpleado='" + nombreEmpleado + '\'' +
+                ", empresa=" + empresa +
+                ", nombreEmpleado='" + nombreEmpleado + '\'' +
                 ", correoEmpleado='" + correoEmpleado + '\'' +
                 ", rolEmpleado=" + rolEmpleado +
+                ", createdAt=" + createdAt +
+                ", updateAt=" + updateAt +
+                ", perfil=" + perfil +
+                ", transacciones=" + transacciones +
                 '}';
     }
-}*/
+}

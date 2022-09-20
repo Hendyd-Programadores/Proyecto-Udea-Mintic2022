@@ -1,12 +1,11 @@
 package com.HendydProgramadores.proyecto.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
-@Table(name ="MovimientoDinero")
-public class MovimientoDinero extends ArrayList<MovimientoDinero> {
+@Table(name ="Movimiento_Dinero")
+public class MovimientoDinero {
     //Atributos
     @Id
     @Column(name="id", nullable = false)
@@ -16,29 +15,29 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     private float monto;
     private Date createdAt;
     private Date updateAt;
-    /*
-    @OneToMany
-    @JoinColumn(name = "Empleado_Id")
-    private Empleado usuario;
 
     @ManyToOne
-    @JoinColumn(name = "Empresa_Id")
+    @JoinColumn(name = "empleado_id")
+    private Empleado empleado;
+
+
+    @ManyToOne
+    @JoinColumn(name = "Empresa_id")
     private Empresa empresa;
-*/
+
 
     //Constructor
-
-    public MovimientoDinero(String concepto, float monto) {
-        //, Empleado usuario
+    public MovimientoDinero(Long id, String concepto, float monto, Date createdAt, Date updateAt, Empresa empresa, Empleado empleado) {
+        this.id = id;
         this.concepto = concepto;
         this.monto = monto;
-        //this.usuario = usuario;
+        this.createdAt = createdAt;
+        this.updateAt = updateAt;
+        this.empleado = empleado;
+        this.empresa = empresa;
     }
 
     public MovimientoDinero() {
-    }
-
-    public MovimientoDinero(String pago_de_servicios_publicos, int monto, String nombreEmpleado) {
     }
 
     //Getters and Setters
@@ -66,13 +65,13 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     public void setMonto(float monto) {
         this.monto = monto;
     }
-/*
-    public Empleado getUsuario() {
-        return usuario;
+
+    public Empleado getEmpleado() {
+        return empleado;
     }
 
-    public void setUsuario(Empleado usuario) {
-        this.usuario = usuario;
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
 
     public Empresa getEmpresa() {
@@ -83,7 +82,7 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
         this.empresa = empresa;
     }
 
- */
+
 
     public Date getCreatedAt() {
         return createdAt;
@@ -104,8 +103,13 @@ public class MovimientoDinero extends ArrayList<MovimientoDinero> {
     @Override
     public String toString() {
         return "MovimientoDinero{" +
-                "monto=" + monto +
+                "id=" + id +
                 ", concepto='" + concepto + '\'' +
+                ", monto=" + monto +
+                ", createdAt=" + createdAt +
+                ", updateAt=" + updateAt +
+                ", empleado=" + empleado +
+                ", empresa=" + empresa +
                 '}';
     }
 }

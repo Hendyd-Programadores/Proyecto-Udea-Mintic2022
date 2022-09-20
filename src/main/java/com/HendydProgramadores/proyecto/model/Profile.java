@@ -13,21 +13,19 @@ public class Profile {
     private Long id;
     private String imagen;
     private String telefono;
-    /*
-    @OneToOne
-    @JoinColumn(name = "Empleado_Id")
-    private Empleado usuario;
-    */
+
+    @OneToOne(mappedBy = "perfil", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Empleado empleado;
+
     private Date createAt;
     private Date updateAt;
 
     //Constructor
-    public Profile(Long id, String imagen, String telefono, Date createAt, Date updateAt) {
-        //Empleado usuario
+    public Profile(Long id, String imagen, String telefono, Date createAt, Date updateAt,Empleado empleado) {
         this.id = id;
         this.imagen = imagen;
         this.telefono = telefono;
-        //this.usuario = usuario;
+        this.empleado = empleado;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
@@ -59,16 +57,14 @@ public class Profile {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-/*
-    public Empleado getUsuario() {
-        return usuario;
+
+    public Empleado getEmpleado() {
+        return empleado;
     }
 
-    public void setUsuario(Empleado usuario) {
-        this.usuario = usuario;
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
-
- */
 
     public Date getCreateAt() {
         return createAt;

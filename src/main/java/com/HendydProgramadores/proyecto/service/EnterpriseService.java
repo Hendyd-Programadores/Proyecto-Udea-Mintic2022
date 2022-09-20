@@ -22,11 +22,15 @@ public class EnterpriseService {
         return (Empresa) enterpriseRespository.findById(id).get();
     }
 
-    //POST y PUT
+    //POST
     public void addEmpresa(Empresa empresa){
         enterpriseRespository.save(empresa);
     }
-    public void editEmpresa(Empresa empresa){enterpriseRespository.save(empresa);}
+    // PUT
+    public void editEmpresa(Empresa empresa,Long id){
+        empresa.setIdEmpresa(id);
+        enterpriseRespository.save(empresa);
+    }
 /*
     //PATCH
     public void editEmpresa(Long id, Empresa empresa){

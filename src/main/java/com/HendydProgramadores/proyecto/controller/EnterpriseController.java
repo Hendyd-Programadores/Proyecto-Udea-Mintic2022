@@ -36,8 +36,8 @@ public class EnterpriseController {
 
  */
     @PutMapping("/enterprise/{id}")
-    private void editEmpresa(@RequestBody Empresa empresa){
-        EnterpriseService.editEmpresa(empresa);
+    private void editEmpresa(@RequestBody Empresa empresa,@PathVariable("id") Long id){
+        EnterpriseService.editEmpresa(empresa,id);
     }
 
     @DeleteMapping("/enterprise/{id}")
