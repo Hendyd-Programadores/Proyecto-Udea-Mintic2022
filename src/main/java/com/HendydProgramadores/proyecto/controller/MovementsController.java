@@ -1,37 +1,45 @@
-/*
 package com.HendydProgramadores.proyecto.controller;
 
-import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.model.MovimientoDinero;
-import com.HendydProgramadores.proyecto.repository.MovimientoDineroRepository;
-import com.HendydProgramadores.proyecto.service.EnterpriseService;
+import com.HendydProgramadores.proyecto.service.MovimientoDineroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-//@RestController
+import java.util.List;
+
+@RestController
 public class MovementsController {
 
     @Autowired
-    private MovimientoDineroRepository repository;
+    private MovimientoDineroService movimientoDineroService;
 
-    @GetMapping("/enterprises/[id]/movements")
-    private void getByEnterprise(@PathVariable Long id) {
-        repository.findAll();
+    @GetMapping("/enterprises/{id}/movements")
+    private List<MovimientoDinero> getByEnterprise(@PathVariable  Long id) {
+        List<MovimientoDinero> deEmpresa = movimientoDineroService.verMovimientos();
+        return movimientoDineroService.verMovimientosEmpresa(id,deEmpresa);
     }
-    @PostMapping("/enterprises/[id]/movements")
-    private void saveByEnterprise(@PathVariable  Long id, @RequestBody MovimientoDinero transaccion) {
-        repository.saveByEnterprise(id, transaccion);
+    @GetMapping("/enterprises/movements")
+    private List<MovimientoDinero> getByEnterprise() {
+        return movimientoDineroService.verMovimientos();
     }
-    @PatchMapping("/enterprises/[id]/movements")
+
+    @GetMapping("/enterprises/{id}/movement")
+    private MovimientoDinero getById(@PathVariable  Long id) {
+        return movimientoDineroService.verMovimiento(id);
+    }
+    @PostMapping("/enterprises/newMovements")
+    private void saveByEnterprise(@RequestBody MovimientoDinero transaccion) {
+        movimientoDineroService.crearMovimiento(transaccion);
+    }
+    @PatchMapping("/enterprises/{id}/movements")
     private void patchByEnterprise(@PathVariable Long id, @RequestBody MovimientoDinero movimientoDinero){
-        repository.patchByEnterprise(id, movimientoDinero);
+        movimientoDineroService.editarMovimiento(id, movimientoDinero);
     }
 
-    @DeleteMapping("/enterprises/[id]/movements")
+    @DeleteMapping("/enterprises/{id}/deleteMovements")
     private void deleteByEnterprise(@PathVariable("id") Long id){
-        repository.deleteByEnterprise(id);
+        movimientoDineroService.eliminarMovimiento(id);
     }
 
 
 }
-*/

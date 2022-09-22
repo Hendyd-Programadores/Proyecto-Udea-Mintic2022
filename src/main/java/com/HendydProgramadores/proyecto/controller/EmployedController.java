@@ -1,45 +1,43 @@
-/*
 package com.HendydProgramadores.proyecto.controller;
 
 import com.HendydProgramadores.proyecto.model.Empleado;
 import com.HendydProgramadores.proyecto.model.Empresa;
-import com.HendydProgramadores.proyecto.service.UserService;
+import com.HendydProgramadores.proyecto.service.EmployedService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@RestController
-public class UserController {
+@RestController
+public class EmployedController {
 
     @Autowired
-    private UserService UserService;
+    private EmployedService employedService;
 
-    @GetMapping("/users")
+    @GetMapping("/employeds")
     private List<Empleado> listEmpleados(){
-        return UserService.verUsuarios();
+        return employedService.verUsuarios();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/employed")
     private void crearUsuario(@RequestBody Empleado empleado){
-        UserService.crearUsuario(empleado);
+        employedService.crearUsuario(empleado);
     }
 
-    @GetMapping("/user/[id]")
+    @GetMapping("/employed/{id}")
     private void verUsuarioById(@PathVariable Long id){
-        UserService.verUsuarioById(id);
+        employedService.verUsuarioById(id);
     }
 
-    @PatchMapping("/user/[id]")
+    @PatchMapping("/employed/{id}")
     private void editarUsuario(@PathVariable Long id, @RequestBody Empresa empresa){
-        UserService.editarUsuario(id, new Empleado());
+        employedService.editarUsuario(id, new Empleado());
     }
 
-    @DeleteMapping("/user/[id]")
+    @DeleteMapping("/employed/{id}")
     private void eliminarUsuario(@PathVariable("id") Long id){
-        UserService.eliminarUsuario(id);
+        employedService.eliminarUsuario(id);
     }
 
 
 }
-*/

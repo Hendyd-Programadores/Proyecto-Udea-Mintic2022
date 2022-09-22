@@ -28,13 +28,13 @@ public class EnterpriseController {
         //Empresa empresaAuxiliar = EnterpriseService.getEmpresaById(id);
         return EnterpriseService.getEmpresaById(id);
     }
-/*
+
     @PatchMapping("/enterprises/{id}")
     private void editEmpresa(@PathVariable Long id, @RequestBody Empresa empresa){
-        EnterpriseService.editEmpresa(id, empresa);
+        EnterpriseService.editEmpresa1(id, empresa);
     }
 
- */
+
     @PutMapping("/enterprise/{id}")
     private void editEmpresa(@RequestBody Empresa empresa,@PathVariable("id") Long id){
         EnterpriseService.editEmpresa(empresa,id);

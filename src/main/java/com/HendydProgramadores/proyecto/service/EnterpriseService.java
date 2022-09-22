@@ -31,9 +31,9 @@ public class EnterpriseService {
         empresa.setIdEmpresa(id);
         enterpriseRespository.save(empresa);
     }
-/*
+
     //PATCH
-    public void editEmpresa(Long id, Empresa empresa){
+    public void editEmpresa1(Long id, Empresa empresa){
         Empresa empresaAuxiliar = new Empresa();
         empresaAuxiliar.setNombre(empresa.getNombre());
         empresaAuxiliar.setNit(empresaAuxiliar.getNit());
@@ -41,8 +41,6 @@ public class EnterpriseService {
         empresaAuxiliar.setDireccion(empresaAuxiliar.getDireccion());
         enterpriseRespository.save(empresaAuxiliar);
     }
-
- */
 
     //DELETE
     public void deleteEmpresa(Long id){

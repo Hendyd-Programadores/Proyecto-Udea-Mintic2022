@@ -1,4 +1,3 @@
-/*
 package com.HendydProgramadores.proyecto.service;
 
 import com.HendydProgramadores.proyecto.model.Empleado;
@@ -8,21 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-//@Service
-public class UserService {
-/*
+@Service
+public class EmployedService {
     @Autowired
     EmployedRepository employedRepository;
 
     //GET
     public List<Empleado> verUsuarios(){
-        return employedRepository.findAll();
+        return new ArrayList<Empleado>(employedRepository.findAll());
     }
     public Empleado verUsuarioById(Long id){
-        return (Empleado) employedRepository.findById(id);
+        return (Empleado) employedRepository.findById(id).get();
     }
     //POST
     public void crearUsuario(Empleado empleado){
@@ -31,18 +28,14 @@ public class UserService {
 
     //PATCH
     public void editarUsuario(Long id, Empleado empleado){
-        Empleado empleadoAuxiliar = new Empleado();
-        empleadoAuxiliar.setNombreEmpleado(empleadoAuxiliar.getNombreEmpleado());
-        empleadoAuxiliar.setCorreoEmpleado(empleadoAuxiliar.getCorreoEmpleado());
-        empleadoAuxiliar.setRolEmpleado(empleadoAuxiliar.getRolEmpleado());
-        employedRepository.save(empleadoAuxiliar);
+        empleado.setIdEmpleado(id);
+        employedRepository.save(empleado);
     }
 
     //DELETE
-    public boolean eliminarUsuario(Long id){
+    public void eliminarUsuario(Long id){
         employedRepository.deleteById(id);
-        return true;
     }
 
 
-}*/
+}
