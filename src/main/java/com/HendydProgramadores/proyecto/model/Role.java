@@ -6,4 +6,3 @@ import javax.persistence.Table;
 public enum Role {
     admin, operario;
 }
-

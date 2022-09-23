@@ -1,7 +1,5 @@
 # Proyecto-Udea-Mintic2022
 
-## Rama development
-
 Nuestro equipo se llama  "HENDYD PROGRAMADORES" 
 y está conformado por:
 
