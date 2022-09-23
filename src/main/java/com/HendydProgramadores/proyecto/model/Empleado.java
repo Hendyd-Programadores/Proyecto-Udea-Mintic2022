@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 
@@ -49,6 +50,6 @@ public class Empleado{
     private LocalDateTime createdAt;
 
     @Column(name="updateAt")
-    private LocalDateTime updateAt;
+    private Date updateAt;
 
 }
