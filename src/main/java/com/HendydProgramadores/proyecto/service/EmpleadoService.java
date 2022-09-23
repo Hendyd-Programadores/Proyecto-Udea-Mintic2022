@@ -16,7 +16,7 @@ public class EmpleadoService implements InterfaceEmpleadoServicio {
 
     Date Today = new Date();
 
-    //Inyectar un Objeto
+    //Inyectamos un Objeto de tipo EmployedRepository
     @Autowired
     EmployedRepository repositoryEmployee;
 

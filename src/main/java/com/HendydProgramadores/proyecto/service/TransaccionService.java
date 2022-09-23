@@ -12,7 +12,7 @@ public class TransaccionService implements InterfaceTransaccionService{
 
     Date Today = new Date();
 
-    //Inyectar un objeto
+    //Inyectamos un Objeto de tipo TransaccionRepository
     @Autowired
     TransaccionRepository transaccionRepository;
 

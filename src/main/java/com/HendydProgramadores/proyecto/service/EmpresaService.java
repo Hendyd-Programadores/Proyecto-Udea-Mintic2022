@@ -1,6 +1,5 @@
 package com.HendydProgramadores.proyecto.service;
 
-import com.HendydProgramadores.proyecto.model.Empleado;
 import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ public class EmpresaService implements InterfaceEmpresaService{
 
     Date Today = new Date();
 
-    //Inyectar un objeto
+    //Inyectamos un Objeto de tipo EnterpriseRepository
     @Autowired
     EnterpriseRepository enterpriseRepository;
 
