@@ -3,11 +3,13 @@ package com.HendydProgramadores.proyecto.service;
 import com.HendydProgramadores.proyecto.model.Transaccion;
 import com.HendydProgramadores.proyecto.repository.TransaccionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TransaccionService implements InterfaceTransaccionService{
 
     Date Today = new Date();

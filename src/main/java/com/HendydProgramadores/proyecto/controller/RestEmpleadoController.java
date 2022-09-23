@@ -2,7 +2,7 @@ package com.HendydProgramadores.proyecto.controller;
 
 import com.HendydProgramadores.proyecto.model.Empleado;
 import com.HendydProgramadores.proyecto.model.ObjetAnswer;
-import com.HendydProgramadores.proyecto.service.InterfaceEmpleadoServicio;
+import com.HendydProgramadores.proyecto.service.InterfaceEmpleadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,26 +11,26 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class RestControllerEmpleado {
+public class RestEmpleadoController {
 
 
     //Hacemos la inyeccion del objeto de tipo InterfaceEmpleadoServicio
     @Autowired
-    InterfaceEmpleadoServicio interfaceEmpleadoServicio;
+    InterfaceEmpleadoService interfaceEmpleadoService;
 
     //Creamos los Mapping
 
     //Mapping para listar Empleados
     @GetMapping("/ListEmployee")
     public ResponseEntity<List<Empleado>> getEmployee(){
-        return new ResponseEntity<>(interfaceEmpleadoServicio.getEmployee(), HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(interfaceEmpleadoService.getEmployee(), HttpStatus.ACCEPTED);
     }
 
     //Mapping para traer una solo Empleado
     @GetMapping("/OneEmployee/{idEmployee}")
     public ResponseEntity<Object> getEmployeePath(@PathVariable Long idEmployee){
         try {
-            Empleado EmployeeX = interfaceEmpleadoServicio.getOnlyOneEmployee(idEmployee);
+            Empleado EmployeeX = interfaceEmpleadoService.getOnlyOneEmployee(idEmployee);
             return new ResponseEntity<>(EmployeeX,HttpStatus.OK);
         }catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
@@ -41,7 +41,7 @@ public class RestControllerEmpleado {
     @PostMapping("/CreateEmployee")
     public ResponseEntity<String> PostCreateEmployee(@RequestBody Empleado EmployeeX){
         try {
-            String message =interfaceEmpleadoServicio.getCreateEmployee(EmployeeX);
+            String message = interfaceEmpleadoService.getCreateEmployee(EmployeeX);
             return new ResponseEntity<>(message,HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
@@ -52,7 +52,7 @@ public class RestControllerEmpleado {
     @PutMapping("/UpdateEmployee")
     public ResponseEntity<ObjetAnswer> putUpdateEmployee(@RequestBody Empleado EmployeeX){
         try {
-            Empleado EmployeeBD = interfaceEmpleadoServicio.getUpdateEmployee(EmployeeX);
+            Empleado EmployeeBD = interfaceEmpleadoService.getUpdateEmployee(EmployeeX);
             return new ResponseEntity<>(new ObjetAnswer("Atualizacion de Employee Exitosa",EmployeeBD),HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<>(new ObjetAnswer(e.getMessage(),null),HttpStatus.INTERNAL_SERVER_ERROR);
@@ -63,7 +63,7 @@ public class RestControllerEmpleado {
     @DeleteMapping("/DeleteEmployee/{idEmployee}")
     public ResponseEntity<String> DeleteEmployee(@PathVariable Long idEmployee){
         try {
-            String message = interfaceEmpleadoServicio.getDeleteEmployee(idEmployee);
+            String message = interfaceEmpleadoService.getDeleteEmployee(idEmployee);
             return new ResponseEntity<>(message,HttpStatus.OK);
         }catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);

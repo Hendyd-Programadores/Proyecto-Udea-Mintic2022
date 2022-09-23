@@ -1,35 +1,33 @@
 package com.HendydProgramadores.proyecto.service;
 
 import com.HendydProgramadores.proyecto.model.Empleado;
-import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.repository.EmployedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EmpleadoService implements InterfaceEmpleadoServicio {
+public class EmpleadoService implements InterfaceEmpleadoService {
 
     Date Today = new Date();
 
     //Inyectamos un Objeto de tipo EmployedRepository
     @Autowired
-    EmployedRepository repositoryEmployee;
+    EmployedRepository employedRepository;
 
     //GET
     @Override
     public List<Empleado> getEmployee() {
-        return repositoryEmployee.findAll();
+        return employedRepository.findAll();
     }
 
     //GET
     @Override
     public Empleado getOnlyOneEmployee(Long idEmployee) throws Exception {
-        Optional<Empleado> EmployeeBD = repositoryEmployee.findById(idEmployee);
+        Optional<Empleado> EmployeeBD = employedRepository.findById(idEmployee);
         if(EmployeeBD.isPresent()){
             return EmployeeBD.get();
         }
@@ -40,9 +38,9 @@ public class EmpleadoService implements InterfaceEmpleadoServicio {
     @Override
     public String getCreateEmployee(Empleado EmployeeIn) {
         //Preguntamos si ya hay alguna Employee ya registrada con ese Id.
-        Optional<Empleado> EmployeeBD = repositoryEmployee.findById(EmployeeIn.getIdEmpleado());
+        Optional<Empleado> EmployeeBD = employedRepository.findById(EmployeeIn.getIdEmpleado());
         if(!EmployeeBD.isPresent()){
-            repositoryEmployee.save(EmployeeIn);
+            employedRepository.save(EmployeeIn);
             return "Empleado Creado con exito";
 
         }
@@ -74,15 +72,15 @@ public class EmpleadoService implements InterfaceEmpleadoServicio {
 
         EmployeeBD.setUpdateAt(Today);
 
-        return repositoryEmployee.save(EmployeeBD);
+        return employedRepository.save(EmployeeBD);
     }
 
     //DELETE
     @Override
     public String getDeleteEmployee(Long idEmployee) throws Exception {
-        Optional<Empleado> EmployeeBD = repositoryEmployee.findById(idEmployee);
+        Optional<Empleado> EmployeeBD = employedRepository.findById(idEmployee);
         if(EmployeeBD.isPresent()){
-            repositoryEmployee.deleteById(idEmployee);
+            employedRepository.deleteById(idEmployee);
             return "Empleado Elimado";
         }
         throw new Exception("Empleado No Existe");

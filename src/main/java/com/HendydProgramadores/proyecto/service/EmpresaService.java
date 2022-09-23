@@ -3,11 +3,13 @@ package com.HendydProgramadores.proyecto.service;
 import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.repository.EnterpriseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class EmpresaService implements InterfaceEmpresaService{
 
     Date Today = new Date();

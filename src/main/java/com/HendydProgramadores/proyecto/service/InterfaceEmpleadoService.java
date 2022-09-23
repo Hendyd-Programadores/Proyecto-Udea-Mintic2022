@@ -4,7 +4,7 @@ import com.HendydProgramadores.proyecto.model.Empleado;
 
 import java.util.List;
 
-public interface InterfaceEmpleadoServicio {
+public interface InterfaceEmpleadoService {
 
     //Metodo que muestra todos los empleados
     public List<Empleado> getEmployee();

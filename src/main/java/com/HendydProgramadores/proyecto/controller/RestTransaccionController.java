@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class RestControllerTransaccion {
+public class RestTransaccionController {
 
     //Hacemos la inyeccion del objeto de tipo ServiceInterfaceTransaction
     @Autowired
