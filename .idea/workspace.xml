@@ -1,32 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2dca7884-5f1f-44ba-86e1-4a8f8aa26334" name="Changes" comment="Agregue codigo de Nico">
-      <change afterPath="$PROJECT_DIR$/clases/MovimientoDinero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clases/Roles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Proyecto-Udea-Mintic2022.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_09_2022_7_05_p__m___Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_09_2022_7_05_p_ m__[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/Persona.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/empresa/Empresa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/movimientoDinero/Insumo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/movimientoDinero/Producto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/movimientoDinero/Venta.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/roles/Administrador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/roles/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/roles/Empleado.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/roles/Proveedor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/.idea/Proyecto-Udea-Mintic2022.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto-Udea-Mintic2022/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +32,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,15 +55,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/JIMMY GARCIA/OneDrive/Documentos/MisionTic/Programacion/Proyecto-Udea-Mintic2022/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/git/MisionTic_Udea/Proyecto-Udea-Mintic2022&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JIMMY GARCIA\OneDrive\Documentos\MisionTic\Programacion\Proyecto-Udea-Mintic2022\src" />
