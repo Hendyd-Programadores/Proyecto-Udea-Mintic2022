@@ -4,13 +4,14 @@ import com.HendydProgramadores.proyecto.model.Empleado;
 import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.model.Profile;
 import com.HendydProgramadores.proyecto.service.ProfileService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class ProfileController {
-
+    @Autowired
     ProfileService profileService;
 
 
