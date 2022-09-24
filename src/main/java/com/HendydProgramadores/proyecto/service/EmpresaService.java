@@ -31,7 +31,7 @@ public class EmpresaService implements InterfaceEmpresaService{
         if(EnterpriseBD.isPresent()){
             return EnterpriseBD.get();
         }
-        throw new Exception("Id No Existe");
+        throw new Exception("Id  No Existe");
     }
 
     //POST
@@ -44,10 +44,11 @@ public class EmpresaService implements InterfaceEmpresaService{
             return "Empresa Creada con exito";
 
         }
-        return ("Ese Id ya Existe");
+        return ("Id Ya Existe");
     }
 
-    //PATCH
+
+    // PUT
     @Override
     public Empresa getUpdateEnterprise(Empresa enterpriseIn) throws Exception {
         //LLamamos a la enterprise a actualizar de la BD
@@ -81,8 +82,8 @@ public class EmpresaService implements InterfaceEmpresaService{
         Optional<Empresa> enterpriseBD = enterpriseRepository.findById(idEnterprise);
         if(enterpriseBD.isPresent()){
             enterpriseRepository.deleteById(idEnterprise);
-            return "Empresa Eliminado con exito";
+            return "Empresa Eliminada con exito";
         }
-        throw new Exception("Empresa No Existe");
+        throw new Exception("Enterprise No Existe");
     }
 }

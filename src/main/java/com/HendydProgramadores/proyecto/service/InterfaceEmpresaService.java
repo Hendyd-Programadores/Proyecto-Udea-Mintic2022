@@ -6,21 +6,21 @@ import java.util.List;
 
 public interface InterfaceEmpresaService {
 
-    //Metodo que nos muestra todas las empresas
+    //Metodo para ver lista de Enterprise
     public List<Empresa> getEnterprise();
 
 
-    //Metodo que consulta una empresa
+    //Metodo que nos trae un Enterprise
     public Empresa getOnlyOneEnterprise(Long idEnterprise) throws Exception;
 
 
-    //Metodo que crea una empresa
+    //Metodo que nos cree una Enterprise
     public String getCreateEnterprise(Empresa enterpriseIn);
 
 
-    //Metodo que actualiza una empresa
+    //Metodo que nos permita actualizar una enterprise
     public Empresa getUpdateEnterprise(Empresa enterpriseIn) throws Exception;
 
-    //Metodo que elimina una empresa
+    //Metodo que elimina una enterprise
     public String getDeleteEnterprise(Long idEnterprise) throws Exception;
 }
