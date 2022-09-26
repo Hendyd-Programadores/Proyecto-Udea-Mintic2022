@@ -21,7 +21,7 @@ public class Empleado{
     //Atributos
     @Id
     @Column(name="id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEmpleado;
     @Column(name="name")
     private String nombreEmpleado;

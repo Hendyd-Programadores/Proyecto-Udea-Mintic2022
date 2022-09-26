@@ -52,7 +52,7 @@ public class RestEmpresaController {
     public ResponseEntity<ObjetAnswer> putUpdateEnterprise(@RequestBody Empresa EnterpriseX){
         try {
             Empresa EnterpriseBD = interfaceEmpresaService.getUpdateEnterprise(EnterpriseX);
-            return new ResponseEntity<>(new ObjetAnswer("Atualizacion de Empresa Exitosa",EnterpriseBD),HttpStatus.OK);
+            return new ResponseEntity<>(new ObjetAnswer("Actualizacion de Empresa Exitosa",EnterpriseBD),HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<>(new ObjetAnswer(e.getMessage(),null),HttpStatus.INTERNAL_SERVER_ERROR);
         }

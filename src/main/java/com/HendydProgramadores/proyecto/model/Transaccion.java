@@ -15,7 +15,7 @@ public class Transaccion {
     //Atributos
     @Id
     @Column(name="id", nullable = false)
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue( strategy = GenerationType.AUTO)
     private Long idTransaccion;
 
     @Column(name="cencept")
