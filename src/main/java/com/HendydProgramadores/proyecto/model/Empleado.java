@@ -5,47 +5,40 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-public class Empleado{
+@Table (name = "Empleado")
+public class Empleado {
     //Atributos
     @Id
-    @Column(name="id", nullable = false)
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEmpleado;
-
     @ManyToOne
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
-
-
-
+    @Column(name = "nombre")
     private String nombreEmpleado;
+    @Column(name = "correo")
     private String correoEmpleado;
     @Enumerated(EnumType.STRING)
     @Column(name = "rol")
     private Roles rolEmpleado;
-    private Date createdAt;
-    private Date updateAt;
-
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "perfil_id")
     private Profile perfil;
-
-    @OneToMany(mappedBy = "empleado",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<MovimientoDinero> transacciones;
+    private Date createdAt;
+    private Date updateAt;
 
-    //Constructor
-    public Empleado(Long idEmpleado, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, Date createdAt, Date updateAt, Empresa empresa, List<MovimientoDinero> transacciones, Profile perfil) {
+    //Constructores
+    public Empleado(Long idEmpleado, Empresa empresa, String nombreEmpleado, String correoEmpleado, Roles rolEmpleado, List<MovimientoDinero> transacciones) {
         this.idEmpleado = idEmpleado;
         this.empresa = empresa;
         this.nombreEmpleado = nombreEmpleado;
         this.correoEmpleado = correoEmpleado;
         this.rolEmpleado = rolEmpleado;
-        this.createdAt = createdAt;
-        this.updateAt = updateAt;
-        this.perfil = perfil;
         this.transacciones = transacciones;
     }
-
     public Empleado() {
     }
 
@@ -66,7 +59,6 @@ public class Empleado{
     public void setEmpresa(Empresa empresa) {
         this.empresa = empresa;
     }
-
 
     public String getNombreEmpleado() {
         return nombreEmpleado;
@@ -92,31 +84,6 @@ public class Empleado{
         this.rolEmpleado = rolEmpleado;
     }
 
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdateAt() {
-        return updateAt;
-    }
-
-    public void setUpdateAt(Date updateAt) {
-        this.updateAt = updateAt;
-    }
-
-    public Profile getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(Profile perfil) {
-        this.perfil = perfil;
-    }
-
     public List<MovimientoDinero> getTransacciones() {
         return transacciones;
     }
@@ -124,7 +91,6 @@ public class Empleado{
     public void setTransacciones(List<MovimientoDinero> transacciones) {
         this.transacciones = transacciones;
     }
-
     @Override
     public String toString() {
         return "Empleado{" +
@@ -133,8 +99,6 @@ public class Empleado{
                 ", nombreEmpleado='" + nombreEmpleado + '\'' +
                 ", correoEmpleado='" + correoEmpleado + '\'' +
                 ", rolEmpleado=" + rolEmpleado +
-                ", createdAt=" + createdAt +
-                ", updateAt=" + updateAt +
                 ", perfil=" + perfil +
                 ", transacciones=" + transacciones +
                 '}';

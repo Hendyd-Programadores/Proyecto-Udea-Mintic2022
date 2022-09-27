@@ -12,39 +12,35 @@ public class Empresa {
     @GeneratedValue( strategy = GenerationType.AUTO)
     //Atributos
     private Long idEmpresa;
-    @Column
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "nit")
     private long nit;
+    @Column(name = "teléfono")
     private int telefono;
+    @Column(name = "dirección")
     private String direccion;
+    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<Empleado> usuarios;
+    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
+    private List<MovimientoDinero> transacciones;
     private Date createdAt;
     private Date updateAt;
 
-    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Empleado> usuarios;
-
-    @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<MovimientoDinero> transacciones;
-
-
-    //Constructor
-    public Empresa(Long idEmpresa, String nombre, long nit, int telefono, String direccion, Date createdAt, Date updateAt, List<Empleado> usuarios, List<MovimientoDinero> transacciones) {
+    //Constructores
+    public Empresa(Long idEmpresa, String nombre, long nit, int telefono, String direccion, List<Empleado> usuarios, List<MovimientoDinero> transacciones) {
         this.idEmpresa = idEmpresa;
         this.nombre = nombre;
         this.nit = nit;
         this.telefono = telefono;
         this.direccion = direccion;
-         this.createdAt = createdAt;
-        this.updateAt = updateAt;
-       this.usuarios = usuarios;
-       this.transacciones = transacciones;
+        this.usuarios = usuarios;
+        this.transacciones = transacciones;
     }
-
     public Empresa() {
     }
 
     //Getters and Setters
-
     public Long getIdEmpresa() {
         return idEmpresa;
     }
@@ -85,22 +81,6 @@ public class Empresa {
         this.direccion = direccion;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdateAt() {
-        return updateAt;
-    }
-
-    public void setUpdateAt(Date updateAt) {
-        this.updateAt = updateAt;
-    }
-
     public List<Empleado> getUsuarios() {
         return usuarios;
     }
@@ -117,7 +97,6 @@ public class Empresa {
         this.transacciones = transacciones;
     }
 
-
     @Override
     public String toString() {
         return "Empresa{" +
@@ -126,8 +105,6 @@ public class Empresa {
                 ", nit=" + nit +
                 ", telefono=" + telefono +
                 ", direccion='" + direccion + '\'' +
-                ", createdAt=" + createdAt +
-                ", updateAt=" + updateAt +
                 ", usuarios=" + usuarios +
                 ", transacciones=" + transacciones +
                 '}';
