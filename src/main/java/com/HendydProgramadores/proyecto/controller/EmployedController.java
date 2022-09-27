@@ -34,6 +34,11 @@ public class EmployedController {
         employedService.editarUsuario(id, new Empleado());
     }
 
+    @PutMapping("/employed/{id}")
+    private void editatUsuarioPut(@PathVariable Long id, @RequestBody Empresa empresa){
+        employedService.editarUsuario(id, new Empleado());
+    }
+
     @DeleteMapping("/employed/{id}")
     private void eliminarUsuario(@PathVariable("id") Long id){
         employedService.eliminarUsuario(id);

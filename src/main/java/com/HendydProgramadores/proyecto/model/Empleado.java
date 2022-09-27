@@ -1,5 +1,7 @@
 package com.HendydProgramadores.proyecto.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -13,6 +15,7 @@ public class Empleado {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEmpleado;
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
     @Column(name = "nombre")

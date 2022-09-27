@@ -24,6 +24,7 @@ public class Empresa {
     private List<Empleado> usuarios;
     @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<MovimientoDinero> transacciones;
+
     private Date createdAt;
     private Date updateAt;
 

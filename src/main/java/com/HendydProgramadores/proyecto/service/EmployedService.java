@@ -16,6 +16,7 @@ public class EmployedService {
 
     //GET
     public List<Empleado> verUsuarios(){
+
         return new ArrayList<Empleado>(employedRepository.findAll());
     }
     public Empleado verUsuarioById(Long id){

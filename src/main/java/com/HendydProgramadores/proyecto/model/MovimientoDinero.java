@@ -1,5 +1,7 @@
 package com.HendydProgramadores.proyecto.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -16,9 +18,11 @@ public class MovimientoDinero {
     @Column(name = "monto")
     private float monto;
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "empleado_id")
     private Empleado empleado;
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "Empresa_id")
     private Empresa empresa;
     private Date createdAt;
