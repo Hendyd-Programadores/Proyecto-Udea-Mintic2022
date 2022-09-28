@@ -21,7 +21,7 @@ public class Empresa {
     @Column(name = "dirección")
     private String direccion;
     @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<Empleado> usuarios;
+    private List<Empleado> empleados;
     @OneToMany(mappedBy = "empresa",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<MovimientoDinero> transacciones;
 
@@ -35,7 +35,7 @@ public class Empresa {
         this.nit = nit;
         this.telefono = telefono;
         this.direccion = direccion;
-        this.usuarios = usuarios;
+        this.empleados = usuarios;
         this.transacciones = transacciones;
     }
     public Empresa() {
@@ -83,11 +83,11 @@ public class Empresa {
     }
 
     public List<Empleado> getUsuarios() {
-        return usuarios;
+        return empleados;
     }
 
     public void setUsuarios(List<Empleado> usuarios) {
-        this.usuarios = usuarios;
+        this.empleados = usuarios;
     }
 
     public List<MovimientoDinero> getTransacciones() {
@@ -106,7 +106,7 @@ public class Empresa {
                 ", nit=" + nit +
                 ", telefono=" + telefono +
                 ", direccion='" + direccion + '\'' +
-                ", usuarios=" + usuarios +
+                ", empleados=" + empleados +
                 ", transacciones=" + transacciones +
                 '}';
     }

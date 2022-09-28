@@ -14,7 +14,6 @@ public class ProfileController {
     @Autowired
     ProfileService profileService;
 
-
     @GetMapping("/profiles")
     private List<Profile> listPerfiles(){
         return profileService.verPerfiles();

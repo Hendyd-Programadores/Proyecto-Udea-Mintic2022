@@ -14,7 +14,7 @@ public class EmployedController {
     @Autowired
     private EmployedService employedService;
 
-    @GetMapping("/employeds")
+    @GetMapping("/employees")
     private List<Empleado> listEmpleados(){
         return employedService.verUsuarios();
     }

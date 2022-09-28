@@ -11,24 +11,25 @@ public class Profile {
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String imagen;
-    private String telefono;
-
+    @Column(name = "usuario")
+    private String usuario;
+    @Column(name = "contraseña")
+    private String contraseña;
     @OneToOne(mappedBy = "perfil", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Empleado empleado;
-
     private Date createAt;
     private Date updateAt;
 
     //Constructor
-    public Profile(Long id, String imagen, String telefono, Date createAt, Date updateAt,Empleado empleado) {
+    public Profile(Long id, String usuario, String contraseña, Empleado empleado, Date createAt, Date updateAt) {
         this.id = id;
-        this.imagen = imagen;
-        this.telefono = telefono;
+        this.usuario = usuario;
+        this.contraseña = contraseña;
         this.empleado = empleado;
         this.createAt = createAt;
         this.updateAt = updateAt;
     }
+
     public Profile() {
     }
 
@@ -42,20 +43,20 @@ public class Profile {
         this.id = id;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getContraseña() {
+        return contraseña;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 
     public Empleado getEmpleado() {

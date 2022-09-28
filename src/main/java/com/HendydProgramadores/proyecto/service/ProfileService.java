@@ -25,13 +25,11 @@ public class ProfileService {
     public void crearPerfil(Profile profile){
         profileRepository.save(profile);
     }
-
     //PATCH
     public void editarPerfil(Long id, Profile profile){
         profile.setId(id);
         profileRepository.save(profile);
     }
-
     //DELETE
     public void eliminarPerfil(Long id){
         profileRepository.deleteById(id);
