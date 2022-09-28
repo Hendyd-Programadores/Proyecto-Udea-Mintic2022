@@ -1,4 +1,4 @@
-package com.HendydProgramadores.proyecto.controller;
+package com.HendydProgramadores.proyecto.webControllers;
 import com.HendydProgramadores.proyecto.service.EmployedService;
 import com.HendydProgramadores.proyecto.service.EnterpriseService;
 import com.HendydProgramadores.proyecto.service.MovimientoDineroService;

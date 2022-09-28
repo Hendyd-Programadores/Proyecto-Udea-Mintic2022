@@ -13,7 +13,7 @@ public class EnterpriseController {
     @Autowired
     EnterpriseService EnterpriseService;
 
-    @GetMapping("/enterprise")
+    @GetMapping("/enterprises")
     private List<Empresa> listEmpresas(){
         return EnterpriseService.listEmpresas();
     }
