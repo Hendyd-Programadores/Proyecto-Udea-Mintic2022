@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -25,4 +27,17 @@ public class WebControllerMovimientoDinero {
         model.addAttribute("atributo", "atributo");
         return "verTransacciones";
     }
+
+    @GetMapping("/agregarTransaccion")
+    public String agregarTransaccion(@ModelAttribute MovimientoDinero transaccion, Model model){
+        model.addAttribute("transaccion", new MovimientoDinero());
+        return "agregarTransaccion";
+    }
+
+    @PostMapping("/agregarTransaccion")
+    public String guardarTransaccion(@ModelAttribute MovimientoDinero transaccion, Model model){
+        controlador.crearMovimiento(transaccion);
+        return "redirect:/verTransacciones";
+    }
+
 }
