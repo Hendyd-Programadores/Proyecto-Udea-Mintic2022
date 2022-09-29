@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/">
+    <link rel="stylesheet" href="../static/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <title>Lista de Movimientos de Dinero</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
     <h1>Lista de Movimientos de Dinero</h1>
     <table class="table">
-        <thead>
+        <thead class=>
         <tr>
             <th scope="col">ID</th>
             <th scope="col">CONCEPTO</th>
@@ -48,11 +49,7 @@
         </tr>
         </tbody>
     </table>
-    <div class="d-grid gap-2 col-6 mx-auto" href="agregarTransaccion">
-        <button class="btn btn-primary" type="button">Agregar Transacción</button>
-    </div>
-    <div class="d-grid gap-2 col-6 mx-auto" href="inicio.html">
-        <button class="btn btn-primary" type="button">Volver</button>
-    </div>
+    <a type="button" class="btn btn-info" href="agregarTransaccion.html">Agregar Transacción</a>
+    <a type="button" class="btn btn-info" href="inicio.html">volver</a>
 </body>
 </html>

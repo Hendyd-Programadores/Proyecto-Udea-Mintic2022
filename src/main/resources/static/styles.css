@@ -5,10 +5,20 @@ body{
 .cont {
     position: relative;
 }
-form{
+
+.login{
       /* centrado vertical */
       position: absolute;
       top: 50%;
       padding-left: 40%;
+      margin-top: 5%;
+}
+
+.empresa{
+/* centrado horizantal*/
+      padding-left: 40%;
+      /* centrado vertical */
+      position: absolute;
+      top: 40%;
       margin-top: 5%;
 }
