@@ -97,6 +97,19 @@ public class Empresa {
     public void setTransacciones(List<MovimientoDinero> transacciones) {
         this.transacciones = transacciones;
     }
+    
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+    public Date getUpdateAt() {
+        return updateAt;
+    }
+    public void setUpdateAt(Date updateAt) {
+        this.updateAt = updateAt;
+    }
 
     @Override
     public String toString() {

@@ -1,7 +1,5 @@
 package com.HendydProgramadores.proyecto.controller;
 
-import com.HendydProgramadores.proyecto.model.Empleado;
-import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.model.Profile;
 import com.HendydProgramadores.proyecto.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;

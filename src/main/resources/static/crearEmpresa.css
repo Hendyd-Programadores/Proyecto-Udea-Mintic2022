@@ -1,0 +1,16 @@
+body{
+    background-color: gainsboro;
+}
+
+.cont {
+    position: relative;
+}
+form{
+    /* centrado horizantal*/
+      padding-left: 40%;
+      /* centrado vertical */
+      position: absolute;
+      top: 40%;
+      margin-top: 5%;
+}
+

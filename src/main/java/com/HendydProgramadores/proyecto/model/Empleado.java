@@ -94,6 +94,25 @@ public class Empleado {
     public void setTransacciones(List<MovimientoDinero> transacciones) {
         this.transacciones = transacciones;
     }
+
+    public Profile getPerfil() {
+        return perfil;
+    }
+    public void setPerfil(Profile perfil) {
+        this.perfil = perfil;
+    }
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+    public Date getUpdateAt() {
+        return updateAt;
+    }
+    public void setUpdateAt(Date updateAt) {
+        this.updateAt = updateAt;
+    }
     @Override
     public String toString() {
         return "Empleado{" +

@@ -1,6 +1,5 @@
 package com.HendydProgramadores.proyecto.service;
 
-import com.HendydProgramadores.proyecto.model.Empleado;
 import com.HendydProgramadores.proyecto.model.MovimientoDinero;
 import com.HendydProgramadores.proyecto.repository.MovimientoDineroRepository;
 import org.springframework.beans.factory.annotation.Autowired;

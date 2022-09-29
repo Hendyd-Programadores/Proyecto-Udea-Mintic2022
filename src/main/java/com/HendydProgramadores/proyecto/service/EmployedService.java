@@ -1,7 +1,6 @@
 package com.HendydProgramadores.proyecto.service;
 
 import com.HendydProgramadores.proyecto.model.Empleado;
-import com.HendydProgramadores.proyecto.model.Empresa;
 import com.HendydProgramadores.proyecto.repository.EmployedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
