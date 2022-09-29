@@ -17,7 +17,7 @@ public class WebControllerMovimientoDinero {
 
     @GetMapping("/inico")
     public String mostrarMv(){
-        return "incio";}
+        return "inicio";}
 
     @GetMapping("/verTransacciones")
     public  String lista(Model model){
